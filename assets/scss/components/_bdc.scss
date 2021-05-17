@@ -171,7 +171,7 @@
     .globe{
         -webkit-animation:spin 4s linear infinite;
         -moz-animation:spin 4s linear infinite;
-        animation:spin 4s linear infinite;
+        animation:spin 8s linear infinite;
         margin-bottom: 7%;
     }
     @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
