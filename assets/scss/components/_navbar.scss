@@ -111,3 +111,33 @@
         }
     }
 }
+.short_nav {
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .mr2 {
+    margin-right: 2.5em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #223F59;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    padding-top: 2em;
+    flex-direction: row;
+    li {
+        cursor: pointer;
+    }
+  }
+  @media only screen and (max-width: 425px){
+    /*Small smartphones [325px -> 425px]*/
+  .mr2 {
+    display: none;
+  }
+}
+}
