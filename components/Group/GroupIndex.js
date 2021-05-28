@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import GroupNavbar from '../shared/Navbar/Group.navbar';
 
@@ -21,14 +22,17 @@ const GroupIndex = () => {
                         <div>
                             <p>Scroll to navigate</p>
                         </div>
-
+                    
                         <div>
-                            <p>Our subsidaries</p>
+                            <Link href="#subsidiaries">
+                               <u><a style={{ color: "#51D489", cursor: "pointer" }}>Our subsidaries &#8594;</a> </u>
+                            </Link>
+                            
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="subsidaries">
+            <div className="subsidaries" id="subsidiaries">
                 <div className="containing_background_content">
                     <div className="our_subsidaries">
                         <div>
@@ -36,30 +40,50 @@ const GroupIndex = () => {
                             <small>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC)</small>
                             <div className="borderless_box mt-4">
                                 <div className="border-top-0 border-right border-bottom p-5">
-                                    <img src="../images/group_1.svg" alt="" />
-                                    <p>Investment</p>
+                                    <Link href="/">
+                                        <a>
+                                            <img src="../images/group_1.svg" alt="" />
+                                            <p>Investment</p>  
+                                        </a>
+                                    </Link>
                                 </div>
 
                                 <div className="border-top-0 border-right border-bottom p-5">
-                                    <img src="../images/group_1.svg" alt="" />
-                                    <p>Microfinance</p>
+                                    <Link href="/">
+                                        <a>
+                                            <img src="../images/group_1.svg" alt="" />
+                                            <p>Microfinance</p>  
+                                        </a>
+                                    </Link>
                                 </div>
 
                                 <div className="border-top-0 border-bottom pt-5 pl-5">
-                                    <img src="../images/group_1.svg" alt="" />
-                                    <p>Bureau De change</p>
+                                    <Link href="/bdc">
+                                        <a>
+                                            <img src="../images/group_1.svg" alt="" />
+                                            <p>Bureau De Change</p>  
+                                        </a>
+                                    </Link>
                                 </div>
 
                                 <div className="border-top-0 border-right p-5">
-                                    <img src="../images/group_1.svg" alt="" />
-                                    <p>DION Factory</p>
+                                    <Link href="/">
+                                        <a>
+                                            <img src="../images/group_1.svg" alt="" />
+                                            <p>DION Factory</p>  
+                                        </a>
+                                    </Link>
                                 </div>
 
                                 <div></div>
 
                                 <div className="border-top-0 border-left p-5">
-                                    <img src="../images/group_1.svg" alt="" />
-                                    <p>Real estate</p>
+                                    <Link href="/real_estate">
+                                        <a>
+                                            <img src="../images/group_1.svg" alt="" />
+                                            <p>Real estate</p>  
+                                        </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -74,20 +98,27 @@ const GroupIndex = () => {
                             <p>Scroll to navigate</p>
                         </div>
 
-                        <div>
-                            <p>Learn about us</p>
-                        </div>
+                        <Link href="#about" >
+                            <u><a style={{ color: "#51D489", cursor: "pointer" }}>Learn about us &#8594;</a> </u>
+                        </Link>
                     </div>
                 </div>
             </div>
-            <div className="building_section">
+            <div className="building_section" id="about">
                 <div className="containing_background_content">
                     <div className="building">
                         <div className="building_details">
                             <small className="text-success">About us</small>
                             <h5 className="mt-3">Building Innovative For a Smart Future</h5>
                             <p>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC). Our philosophy is to provide our clients with the best independent advice on their investments and help them get the best value for their money.</p>
-                            <button className="btn btn-success px-4">Learn more</button>
+                            <Link href="/mission">
+                                    <a>
+                                        <button className="btn btn-success px-4">
+                                            Learn more
+                                        </button>
+                                    </a>
+                            </Link>
+                            
                         </div>
 
                         <div className="building_img text-right">
@@ -100,12 +131,14 @@ const GroupIndex = () => {
                         </div>
 
                         <div className="text-right">
-                            <p>Core values</p>
+                            <Link href="#about" >
+                                <u><a style={{ color: "#51D489", cursor: "pointer" }}>Core Values &#8594;</a> </u>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="core_values">
+            <div className="core_values" id="core_values">
                 <div className="containing_background_content core_value_things">
                     <div className="core_values_content">
                         <h5>Our core <span>values</span></h5>

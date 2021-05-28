@@ -30,11 +30,11 @@ import {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink href="/">About us</NavLink>
+                            <NavLink href="#about">About us</NavLink>
                         </NavItem>
 
                         <NavItem>
-                            <NavLink href="/">Subsidaries</NavLink>
+                            <NavLink href="#subsidiaries">Subsidaries</NavLink>
                         </NavItem>
 
                         <NavItem>

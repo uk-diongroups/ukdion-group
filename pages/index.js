@@ -1,13 +1,11 @@
-import Body from "../components/Body/Body";
-// import Header from "../components/Header/Header";
-import Footer from "../components/shared/Footer/Footer";
+import GroupIndex from "../components/Group/GroupIndex"
 
-export default function Home() {
-  return (
-    <div>
-      {/* <Header /> */}
-      <Body/>
-      <Footer />
-    </div>
-  )
-}
+const Home = () => {
+    return (
+        <div>
+            <GroupIndex/>
+        </div>
+    );
+};
+
+export default Home;
