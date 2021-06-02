@@ -1,7 +1,7 @@
 .footer {
     background: #F0F4F8;
     color: #646569;
-    padding: 2em 3em;
+    padding: 2em 5em;
     font-style: normal;
     font-weight: 200;
     font-family: Avenir Next;
@@ -57,10 +57,11 @@
     .subsidiary-links {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         flex-wrap: wrap;
         color: #646569;
         .topic-column {
-            margin-right: 4em;
+            // margin-right: 4em;
             margin-top: 1.5em;
             p {
                 line-height: 23px;
@@ -74,6 +75,7 @@
                 padding-left: 0;
                 li {
                     line-height: 28px;
+                    font-size: 15px;
                 }
             }
         }

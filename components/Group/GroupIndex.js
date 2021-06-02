@@ -11,6 +11,7 @@ const GroupIndex = () => {
                     <div className="group_header_content">
                         <div>
                             <h5>We simply add <span>value</span></h5>
+                            
                             <small>Leading you through the successful path of investment. No guessing. We simply stay S.M.A.R.T bringing you the best returns on investment.</small>
                         </div>
 
@@ -18,9 +19,10 @@ const GroupIndex = () => {
                             <img src="/images/group_1.svg" className="" />
                         </div>
                     </div>
-                    <div className="d-flex justify-content-between" style={{marginTop:'7rem'}}>
+                    
+                    <div className="d-flex justify-content-between" style={{marginTop:'5rem', marginRight: '2rem'}}>
                         <div>
-                            <p>Scroll to navigate</p>
+                            <p></p>
                         </div>
                     
                         <div>
@@ -38,8 +40,10 @@ const GroupIndex = () => {
                         <div>
                             <h5>Our subsidaries</h5>
                             <small>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC)</small>
+                            <br />
+                            <br />
                             <div className="borderless_box mt-4">
-                                <div className="border-top-0 border-right border-bottom p-5">
+                                <div className="border-top-0 border-right border-bottom pl-0 pr-3 py-3 borderful">
                                     <Link href="/">
                                         <a>
                                             <img src="../images/group_1.svg" alt="" />
@@ -48,7 +52,7 @@ const GroupIndex = () => {
                                     </Link>
                                 </div>
 
-                                <div className="border-top-0 border-right border-bottom p-5">
+                                <div className="border-top-0 border-right border-bottom p-3 borderful">
                                     <Link href="/">
                                         <a>
                                             <img src="../images/group_1.svg" alt="" />
@@ -57,7 +61,7 @@ const GroupIndex = () => {
                                     </Link>
                                 </div>
 
-                                <div className="border-top-0 border-bottom pt-5 pl-5">
+                                <div className="border-top-0 border-bottom pt-3 pl-3 borderful">
                                     <Link href="/bdc">
                                         <a>
                                             <img src="../images/group_1.svg" alt="" />
@@ -66,7 +70,7 @@ const GroupIndex = () => {
                                     </Link>
                                 </div>
 
-                                <div className="border-top-0 border-right p-5">
+                                <div className="border-top-0 border-right pl-0 pr-3 py-3 borderful">
                                     <Link href="/">
                                         <a>
                                             <img src="../images/group_1.svg" alt="" />
@@ -77,7 +81,7 @@ const GroupIndex = () => {
 
                                 <div></div>
 
-                                <div className="border-top-0 border-left p-5">
+                                <div className="border-top-0 border-left p-3 borderful">
                                     <Link href="/real_estate">
                                         <a>
                                             <img src="../images/group_1.svg" alt="" />
@@ -93,9 +97,9 @@ const GroupIndex = () => {
                         </div>
                     </div>
 
-                    <div className="d-flex justify-content-between">
+                    <div className="d-flex justify-content-between mt-5">
                         <div>
-                            <p>Scroll to navigate</p>
+                            {/* <p>Scroll to navigate</p> */}
                         </div>
 
                         <Link href="#about" >
@@ -125,9 +129,9 @@ const GroupIndex = () => {
                             <img src="../images/group_3.png" alt=""/>
                         </div>
                     </div>
-                    <div className="d-flex justify-content-between">
+                    <div className="d-flex justify-content-between mt-5">
                         <div>
-                            <p>Scroll to navigate</p>
+                            <p></p>
                         </div>
 
                         <div className="text-right">
@@ -144,7 +148,7 @@ const GroupIndex = () => {
                         <h5>Our core <span>values</span></h5>
                         <small>UK-DION Group is a bespoke group of companies focused on delivering value in the financial Services space.Our model is focused on investment management, financial Advisory,.</small>
                     </div>
-                    <div className="core_value_icons mt-4">
+                    <div className="core_value_icons mt-5">
                         <div>
                             <img src="../images/time-is-money.png" alt="" />
                             <p className="mt-2">United</p>

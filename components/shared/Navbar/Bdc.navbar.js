@@ -3,7 +3,7 @@ import Image from 'next/Image';
 import {
     Collapse,
     Navbar,
-    NavbarToggler,
+    // NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,

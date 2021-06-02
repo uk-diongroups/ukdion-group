@@ -20,12 +20,14 @@ const Mission = () => {
                 <div className="mission_header_content">
                     <h4>We simply add <span>value</span></h4>
                     <p>UK-DION Group is a bespoke group of companies focused on delivering value in the financial Services space.Our model is focused on investment management, financial Advisory, Micro-Finance and FX services. we are a leading alternative asset manager. Our funds are focused on areas accretive to Africa’s and Nigeria’s economic development targeting sectors such as Real Estate, SMEs, Financial Inclusion, Healthcare and Education.</p>
+                    <br />
                     <div>
                         <img src="../images/group_12.png" alt="" width="100%"/>
                     </div>
                 </div>
             </div>
-
+            <br />
+            <br />
             <div className="about_background">
                 <div className="about_background_content">
                     <div className="our_core_values">

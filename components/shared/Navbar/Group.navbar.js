@@ -3,12 +3,13 @@ import Image from 'next/Image';
 import {
     Collapse,
     Navbar,
-    NavbarToggler,
+    // NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
     NavLink
   } from 'reactstrap';
+import Link from 'next/link';
 
   const GroupNavbar = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,15 +17,19 @@ import {
     const toggle = () => setIsOpen(!isOpen);
     return (
         <div className="bdc_navbar">
-            <div className="navbarr m-0">
+            <div className="navbarr">
             <Navbar  expand="md">
                 <NavbarBrand href="/" className="mr-auto" tag={()=>
-                    <Image
-                        src="/company-logo.png"
-                        alt="Company logo"
-                        width={70}
-                        height={70}
-                    />}>   
+                <Link href="/">
+                    <a>
+                        <Image
+                            src="/company-logo.png"
+                            alt="Company logo"
+                            width={70}
+                            height={70}
+                        />
+                    </a>
+                </Link>}>
                 </NavbarBrand>
                 
                 <Collapse isOpen={isOpen} navbar>
