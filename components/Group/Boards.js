@@ -36,7 +36,7 @@ const Boards = () => {
             </div>
 
             <div className="plenty_images">
-                <img src="../images/Osiri.png" alt=""/>
+                <img src="../images/Osiri.jpg" alt=""/>
                 <div className="text-center">
                     <p className="board_name">Osiri N. Wisdom</p>
                     <p className="board_position">Independent Non-Executive Director</p>
@@ -44,7 +44,7 @@ const Boards = () => {
             </div>
 
             <div className="plenty_images">
-                <img src="../images/Nnena.png" alt=""/>
+                <img src="../images/Nnena.jpg" alt=""/>
                 <div className="text-center">
                     <p className="board_name">Nnenna H. Ikubogh</p>
                     <p className="board_position">Executive Director, Strategy</p>
@@ -52,7 +52,7 @@ const Boards = () => {
             </div>
 
             <div className="plenty_images">
-                <img src="../images/adaeze.png" alt=""/>
+                <img src="../images/adaeze.jpg" alt=""/>
                 <div className="text-center">
                     <p className="board_name">Adaeze S. Ejionye</p>
                     <p className="board_position">Executive Director, Sales</p>
@@ -60,7 +60,7 @@ const Boards = () => {
             </div>
 
             <div className="plenty_images">
-                <img src="../images/chuka.png" alt=""/>
+                <img src="../images/chuka.jpg" alt=""/>
                 <div className="text-center">
                     <p className="board_name">Chukwuka Chukwuma</p>
                     <p className="board_position">Executive Director, Revenue</p>
@@ -68,7 +68,7 @@ const Boards = () => {
             </div>
 
             <div className="plenty_images">
-                <img src="../images/Olapade.png" alt=""/>
+                <img src="../images/Olapade.jpg" alt=""/>
                 <div className="text-center">
                     <p className="board_name">Saidi Olapade</p>
                     <p className="board_position">Managing Director, MFB</p>

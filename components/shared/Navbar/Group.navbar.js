@@ -20,10 +20,10 @@ import {
             <Navbar  expand="md">
                 <NavbarBrand href="/" className="mr-auto" tag={()=>
                     <Image
-                        src="/company-logo.png"
+                        src="/second_logo.svg"
                         alt="Company logo"
-                        width={70}
-                        height={70}
+                        width={120}
+                        height={120}
                     />}>   
                 </NavbarBrand>
                 
