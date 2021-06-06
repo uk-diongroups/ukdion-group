@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image'
+// import Image from 'next/image'
 import BdcNavbar from '../shared/Navbar/Bdc.navbar';
 const Body = () => {
     return (

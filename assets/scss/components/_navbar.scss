@@ -1,6 +1,12 @@
+.group_links{
+  a{
+    &:hover{
+      color: green;
+    }
+  }
+}
 .navbarr {
-    margin: 0 1.5em;
-    
+    margin: 0 1.5em;    
     .navbar {
         padding: 0 !important;
         // background: #fff !important;
@@ -27,6 +33,7 @@
             -o-transition: .5s ease-in-out;
             transition: .5s ease-in-out;
             cursor: pointer;
+            margin-top: 1rem;
           }
           
         #close-icon span {
