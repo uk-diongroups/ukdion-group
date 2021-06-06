@@ -1,13 +1,19 @@
 .footer {
     background: #F0F4F8;
     color: #646569;
-    padding: 2em 3em;
+    padding: 2em 6em;
     font-style: normal;
     font-weight: 200;
-    font-family: Avenir Next;
+    font-family: AvenirNext;
     font-size: 17px;
     letter-spacing: 0.03em;
+    position: relative;
     margin-bottom: 0;
+    .email_link{
+        &:hover{
+            color: green !important;
+        }
+    }
     .underline {
       text-decoration-line: underline;  
     }
@@ -21,6 +27,13 @@
     }
     &-body {
         line-height: 28px;
+        font-size: 15px;
+    }
+    .input-section {
+        &:focus-visible{
+            outline: none;
+            border-radius: 10px;
+        }
     }
     &-icon {
         color: #0BA759;
@@ -57,6 +70,7 @@
     .subsidiary-links {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         flex-wrap: wrap;
         color: #646569;
         .topic-column {
@@ -67,18 +81,27 @@
                 text-transform: uppercase;
                 margin-bottom: 15px;
                 font-weight: bold;
-                font-family: Avenir Next;
+                font-family: AvenirNext;
             }
             ul {
                 list-style: none;
                 padding-left: 0;
                 li {
                     line-height: 28px;
+                    font-size: 14px;
+                }
+                a{
+                    &:hover{
+                        color: green;
+                    }
                 }
             }
         }
     }
     &-span {
         margin: 0 2px;
+    }
+    .tales_of_moonlight{
+        font-size: 13px;
     }
 }

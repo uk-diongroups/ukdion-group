@@ -1,0 +1,43 @@
+.overall {
+    padding: 0 3em;
+}
+.mediaComp {
+    h3 {
+        font-family: FinancierDisplay;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 76px;
+        letter-spacing: 0.01em;
+        color: #333333;
+        text-align: center;
+    }
+    .privacy_group {
+        display: flex;
+        width: 280px;
+        justify-content: space-between;
+        margin: 0 auto;
+        .item {
+            cursor: pointer;
+            text-align: center;
+            p {
+                margin-bottom: 0;
+            }
+        }
+        .active {
+            color: #0BA759;
+        }
+    }
+    .privacy_text {
+        p {
+            font-family: AvenirNext;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 23px;
+            letter-spacing: 0.03em;
+            color: #223F59;
+            text-align: justify;
+        }
+    }
+}

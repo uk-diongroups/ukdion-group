@@ -1,16 +1,64 @@
+.activeClass {
+    border-bottom: 1px solid #333;
+}
+
+.pulse {
+    animation: pulse-animation 2s infinite;
+  }
+  
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+  }
+  
+  
+
+.small_section{
+    display: flex;
+    position: absolute;
+    img{
+        width: 104px;
+    }
+    .small1{
+        margin-top: 90%;
+        border-radius: 50%;
+    }
+    .small2{
+        position: relative;
+        left: 95%;
+        margin-top: 70%;
+        border-radius: 50%;
+        height: fit-content;
+    }
+    .small3{
+        position: relative;
+        margin-top: -20%;
+        height: fit-content;
+        border-radius: 50%;
+    }
+}
+
 .group_header_content{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 0 2.0em;
     margin-top: 8%;
+
     h5{
         font-family: FinancierDisplay;
         font-style: normal;
         font-weight: bold;
         font-size: 80px;
+        width: max-content;
         line-height: 87px;
         letter-spacing: 0.03em;
         color: #333333;
         margin-top: 4rem;
+        margin-bottom: 16px;
         span{
             color: #0BA759;
         }
@@ -30,9 +78,12 @@
     }
 }
 
+
 .subsidaries{
     background-color: #1B2056;
     height: 100vh;
+    padding: 0 1.5rem;
+    padding-top: 2.5rem;
     color: white;
     .our_subsidaries{
         display: grid;
@@ -40,6 +91,7 @@
         padding-top: 1rem;
         padding-bottom: 3rem;
         h5{
+            font-family: FinancierDisplay;
             font-weight: normal;
             font-size: 56px;
             line-height: 61px;
@@ -56,6 +108,9 @@
 
     .borderless_box{
         display: grid;
+        .borderful {
+            border-color: #8a8a8a2b !important;
+        }
         grid-template-columns: 1fr repeat(2, 1fr);
         img{
             width: 25px;
@@ -68,18 +123,23 @@
     }
 }
 
+.building_section{
+    height: 100vh;
+}
 .building{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding: 0 1.5rem;
+    // padding-top: 2rem;
+    // padding-bottom: 4rem;
     .building_img img{
         width:85%;
+        margin-top:4rem;
     }
     .building_details{
         margin-top:4rem;
         h5{
+            font-family: FinancierDisplay;
             font-weight: bold;
             font-size: 50px;
             line-height: 61px;
@@ -103,6 +163,7 @@
     height: 100vh;
     .core_values_content{
         h5{
+            font-family: FinancierDisplay;
             font-weight: bold;
             font-size: 51px;
             line-height: 61px;

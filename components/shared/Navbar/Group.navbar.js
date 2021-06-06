@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import Image from 'next/Image';
+import Image from 'next/image';
 import {
     Collapse,
     Navbar,
-    NavbarToggler,
+    // NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
     NavLink
   } from 'reactstrap';
+import Link from 'next/link';
 
   const GroupNavbar = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,34 +17,35 @@ import {
     const toggle = () => setIsOpen(!isOpen);
     return (
         <div className="bdc_navbar">
-            <div className="navbarr m-0">
+            <div className="navbarr">
             <Navbar  expand="md">
                 <NavbarBrand href="/" className="mr-auto" tag={()=>
                     <Image
-                        src="/company-logo.png"
+                        src="/second_logo.svg"
                         alt="Company logo"
-                        width={70}
-                        height={70}
+                        width={120}
+                        height={90}
+                        style={{marginTop:'-30px'}}
                     />}>   
                 </NavbarBrand>
                 
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink href="#about">About us</NavLink>
-                        </NavItem>
-
+                <Collapse isOpen={isOpen} navbar className="mt-3">
+                    <Nav className="ml-auto group_links" navbar>
                         <NavItem>
                             <NavLink href="#subsidiaries">Subsidaries</NavLink>
                         </NavItem>
 
                         <NavItem>
-                            <NavLink href="/">Media</NavLink>
+                            <NavLink href="#about">About us</NavLink>
                         </NavItem>
 
                         <NavItem>
-                            <NavLink href="/">Careers</NavLink>
+                            <NavLink href="#">Blog</NavLink>
                         </NavItem>
+
+                        {/* <NavItem>
+                            <NavLink href="/">Careers</NavLink>
+                        </NavItem> */}
                     </Nav>
                 </Collapse>
                 <div id="close-icon">

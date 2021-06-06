@@ -4,43 +4,23 @@ import Link from 'next/link'
 const Footer = () => {
     const routes = [
         {
-            head: "OUR EXPERTISE",
+            head: "COMPANY",
             routes: [
                 {
-                    name: "Goal based investment",
+                    name: "About us",
+                    link: "/about"
+                },
+                
+                {
+                    name: "Careers",
                     link: "/"
                 },
                 {
-                    name: "Wealth and portfolio",
+                    name: "Contact",
                     link: "/"
                 },
                 {
-                    name: "Risk management",
-                    link: "/"
-                },
-                {
-                    name: "Financial advisory services",
-                    link: "/"
-                }
-            ]
-        },
-        {
-            head: "INVESTMENT PLANS",
-            routes: [
-                {
-                    name: "Smart savers",
-                    link: "/"
-                },
-                {
-                    name: "Prime capital",
-                    link: "/"
-                },
-                {
-                    name: "Child trust fund",
-                    link: "/"
-                },
-                {
-                    name: "Investment club",
+                    name: "Blog",
                     link: "/"
                 }
             ]
@@ -58,49 +38,15 @@ const Footer = () => {
                 },
                 {
                     name: "Bureau De change",
-                    link: "/"
+                    link: "/bdc"
                 },
                 {
                     name: "Dion water",
                     link: "/"
-                }
-            ]
-        },
-        {
-            head: "LEGAL COMPLIANCES",
-            routes: [
-                {
-                    name: "Privacy policy",
-                    link: "/"
                 },
                 {
-                    name: "Terms of service",
-                    link: "/"
-                },
-                {
-                    name: "Contact",
-                    link: "/"
-                }
-            ]
-        },
-        {
-            head: "COMPANY",
-            routes: [
-                {
-                    name: "About us",
-                    link: "/"
-                },
-                {
-                    name: "Our team",
-                    link: "/"
-                },
-                {
-                    name: "Careers",
-                    link: "/"
-                },
-                {
-                    name: "Contact",
-                    link: "/"
+                    name: "Real Estate",
+                    link: "/real_estate"
                 }
             ]
         },
@@ -120,12 +66,67 @@ const Footer = () => {
                     link: "/"
                 }
             ]
+        },
+        {
+            head: "LEGAL COMPLIANCES",
+            routes: [
+                {
+                    name: "Privacy policy",
+                    link: "/media"
+                },
+                {
+                    name: "Terms of service",
+                    link: "/media"
+                }
+            ]
         }
+        // {
+        //     head: "OUR EXPERTISE",
+        //     routes: [
+        //         {
+        //             name: "Goal based investment",
+        //             link: "/"
+        //         },
+        //         {
+        //             name: "Wealth and portfolio",
+        //             link: "/"
+        //         },
+        //         {
+        //             name: "Risk management",
+        //             link: "/"
+        //         },
+        //         {
+        //             name: "Financial advisory services",
+        //             link: "/"
+        //         }
+        //     ]
+        // },
+        // {
+        //     head: "INVESTMENT PLANS",
+        //     routes: [
+        //         {
+        //             name: "Smart savers",
+        //             link: "/"
+        //         },
+        //         {
+        //             name: "Prime capital",
+        //             link: "/"
+        //         },
+        //         {
+        //             name: "Child trust fund",
+        //             link: "/"
+        //         },
+        //         {
+        //             name: "Investment club",
+        //             link: "/"
+        //         }
+        //     ]
+        // }
     ]
     return (
         <footer className="footer">
-            <Col md={12}>
-                <Row>
+            <Col md={12} className="footer_content">
+                <Row  className="pt-4">
                     <Col md={6}>
                         <div>
                             <Row>
@@ -163,17 +164,16 @@ const Footer = () => {
                             <Row>+234(0)8091115748</Row>
                         </div>
                         <br/>
-                        <Link href="mailto: abc@example.com">
-                            <a>
-                                <Row>
-                                    <svg className="footer-icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill="#F0F4F8" d="M20.625 4.5H4.875C3.83947 4.5 3 5.33947 3 6.375V17.625C3 18.6605 3.83947 19.5 4.875 19.5H20.625C21.6605 19.5 22.5 18.6605 22.5 17.625V6.375C22.5 5.33947 21.6605 4.5 20.625 4.5Z" stroke="#0BA759" strokeWidth="2.89062" strokeLinecap="round" strokeLinejoin="round"/>
-                                        <path fill="#F0F4F8" d="M6 7.5L12.75 12.75L19.5 7.5" stroke="#0BA759" strokeWidth="2.89062" strokeLinecap="round" strokeLinejoin="round"/>
-                                    </svg>
-                                    <p className="underline">Email</p>  
-                                </Row>
-                            </a>  
-                        </Link>
+                        
+                        <a href="mailto: abc@example.com" className="email_link">
+                            <Row>
+                                <svg className="footer-icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="#F0F4F8" d="M20.625 4.5H4.875C3.83947 4.5 3 5.33947 3 6.375V17.625C3 18.6605 3.83947 19.5 4.875 19.5H20.625C21.6605 19.5 22.5 18.6605 22.5 17.625V6.375C22.5 5.33947 21.6605 4.5 20.625 4.5Z" stroke="#0BA759" strokeWidth="2.89062" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path fill="#F0F4F8" d="M6 7.5L12.75 12.75L19.5 7.5" stroke="#0BA759" strokeWidth="2.89062" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                                <p className="underline">Email</p>  
+                            </Row>
+                        </a>  
                     </Col>
                     <Col md={6}>
                         <div>
@@ -187,8 +187,8 @@ const Footer = () => {
                             </Row> 
                             <br />
                             <Row>
-                              <input type="text" />  
-                              <button type="button">Subscribe now</button>
+                              <input type="text" className="px-3 input-section" />  
+                              <button type="button" className="px-4">Subscribe now</button>
                             </Row>
                             
                         </div>
@@ -222,16 +222,17 @@ const Footer = () => {
                 <hr />
                 <Row>
                     <Col md={6}>
-                        © 2021 Copyright: UK-Dion Group 
+                        <small>© 2021 Copyright: UK-Dion Group</small>
                     </Col>
-                    <Col md={6}>
-                        Developed with 
-                        <span className="footer-span">
-                            <svg width="24" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M24 7.38508C24 3.30637 21.0357 0 17.3797 0C15.1602 0 13.2017 1.22211 12 3.09009C10.7983 1.22211 8.83981 0 6.62097 0C2.96427 0 0 3.30562 0 7.38508C0 7.96283 0.0657534 8.52262 0.178474 9.06221C1.09768 15.4332 7.44825 22.1545 12 24C16.5511 22.1545 22.9023 15.4332 23.8202 9.06296C23.9342 8.52337 24 7.96358 24 7.38508Z" fill="#78B159"/>
-                            </svg>
-                        </span>
-                        by the UK-Dion Group
+                    <Col md={6} className="text-right">
+                        <small>Developed with 
+                            <span className="footer-span">
+                                <svg width="24" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 7.38508C24 3.30637 21.0357 0 17.3797 0C15.1602 0 13.2017 1.22211 12 3.09009C10.7983 1.22211 8.83981 0 6.62097 0C2.96427 0 0 3.30562 0 7.38508C0 7.96283 0.0657534 8.52262 0.178474 9.06221C1.09768 15.4332 7.44825 22.1545 12 24C16.5511 22.1545 22.9023 15.4332 23.8202 9.06296C23.9342 8.52337 24 7.96358 24 7.38508Z" fill="#78B159"/>
+                                </svg>
+                            </span>
+                            by the UK-Dion Group
+                        </small>
                     </Col>
                 </Row>
             </Col>
