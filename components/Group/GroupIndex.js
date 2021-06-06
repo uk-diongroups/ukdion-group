@@ -123,7 +123,7 @@ const GroupIndex = () => {
                             <small className="text-success">About us</small>
                             <h5 className="mt-3">Building Innovative For a Smart Future</h5>
                             <p>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC). Our philosophy is to provide our clients with the best independent advice on their investments and help them get the best value for their money.</p>
-                            <Link href="/mission">
+                            <Link href="/about">
                                     <a>
                                         <button className="btn btn-success px-4">
                                             Learn more
