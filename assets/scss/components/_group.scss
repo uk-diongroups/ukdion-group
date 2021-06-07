@@ -4,6 +4,7 @@
 
 .pulse {
     animation: pulse-animation 2s infinite;
+    transform: scale(0.7);
   }
   
   @keyframes pulse-animation {
@@ -21,16 +22,16 @@
     display: flex;
     position: absolute;
     img{
-        width: 104px;
+        width: 90px;
     }
     .small1{
-        margin-top: 90%;
+        margin-top: 125%;
         border-radius: 50%;
     }
     .small2{
         position: relative;
-        left: 95%;
-        margin-top: 70%;
+        left: 158%;
+        margin-top: 125%;
         border-radius: 50%;
         height: fit-content;
     }
@@ -52,7 +53,7 @@
         font-family: FinancierDisplay;
         font-style: normal;
         font-weight: bold;
-        font-size: 80px;
+        font-size: 65px;
         width: max-content;
         line-height: 87px;
         letter-spacing: 0.03em;
@@ -69,7 +70,7 @@
     small{
         font-weight: 500;
         font-size: 16px;
-        line-height: 27px;
+        line-height: 24px;
         letter-spacing: 0.03em;
         color: #223F59;
     }

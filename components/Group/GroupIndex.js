@@ -59,7 +59,6 @@ const GroupIndex = () => {
                     <motion.div variants={stagger} className="group_header_content">
                         <motion.div variants={fadeInRight}>
                             <h5>We simply add <span>value</span></h5>
-                            
                             <small>Leading you through the successful path of investment. No guessing. We simply stay S.M.A.R.T bringing you the best returns on investment.</small>
                         </motion.div>
 
@@ -73,6 +72,7 @@ const GroupIndex = () => {
                             <img src="/images/small2.svg" alt="" className="small2 pulse"/>
                         
                             <img src="/images/small3.svg" alt="" className="small3 pulse"/>
+
                         </div>
                     </motion.div>
                     
@@ -80,12 +80,11 @@ const GroupIndex = () => {
                         <div>
                             <p></p>
                         </div>
-                    
+
                         <div>
                             <Link href="#subsidiaries">
                                <u><a style={{ color: "#51D489", cursor: "pointer" }}>Our subsidiaries &#8594;</a> </u>
                             </Link>
-                            
                         </div>
                     </div>
                 </div>
