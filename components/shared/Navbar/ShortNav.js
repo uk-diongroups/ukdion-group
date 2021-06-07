@@ -12,7 +12,7 @@ const ShortNav = () => {
                 height={70}
             /> 
             <ul>
-                <li className="mr2">
+                <li className="mr2 group_links">
                     <Link href="/">
                         <a>Back to website</a>
                     </Link>

@@ -7,36 +7,35 @@ const RHheader = () => {
     const [status, setStatus] = useState("mission")
     return (
         <div className="real_estate">
-            <ShortNav />
-            <br />
-            <br />
-            <div className="real_estate-hero">
-                <div className="first-half">
-                    <div>
-                        <div className="real_estate-hero_text">
-                            <p>Adding value to the economy
-                            by creating <span>affordable living </span>
-                            for residents.</p>
+            <div className="real_estate_content">
+                <ShortNav />
+                <br />
+                <br />
+                <div className="real_estate-hero">
+                    <div className="first-half mt-5">
+                        <div>
+                            <div className="real_estate-hero_text">
+                                <p>Adding value to the economy through <span>real estate</span></p>
+                            </div>
+                            <br />
+                            <p className="subhead">
+                            UK-DION Homes is a leading real estate company engaged in the acquisition, development, investment and management of luxurious contemporary homes across Nigeria.
+                            </p> 
+                            <br />
+                            <button>Request for exchange</button> 
                         </div>
-                        <br />
-                        <p className="subhead">
-                            We help businesses and individuals place orders and 
-                            broker foreign currency transactions conveniently and securely
-                        </p> 
-                        <br />
-                        <button>Request for exchange</button> 
                     </div>
-                </div>
-                
-                <div className="real_estate-hero_image">
-                    <Image
-                        src="/house.png"
-                        alt="House image"
-                        className="image"
-                        width="1000"
-                        height="1000"
-                        layout="responsive"
-                    /> 
+                    
+                    <div className="real_estate-hero_image">
+                        <Image
+                            src="/house.png"
+                            alt="House image"
+                            className="image"
+                            width="1000"
+                            height="1000"
+                            layout="responsive"
+                        /> 
+                    </div>
                 </div>
             </div>
             <br /><br /><br />
