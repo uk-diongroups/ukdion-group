@@ -73,7 +73,7 @@ const RHheader = () => {
                     <div className="toggle_content">
                         {
                             status === "mission" ? 
-                            "Adding value to the economy by creating affordable living for residents.Offering luxury and affordable housing by using modern day technology to proffer housing solutions for residents in West Africa." : "This is the text for vision"
+                            "Adding value to the economy by creating affordable living for residents. Offering luxury and affordable housing by using modern day technology to proffer housing solutions for residents in West Africa." : "This is the text for vision"
                         }
                     </div>
                 </div>

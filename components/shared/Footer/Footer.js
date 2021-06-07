@@ -55,7 +55,7 @@ const Footer = () => {
             routes: [
                 {
                     name: "Media",
-                    link: "/"
+                    link: "/media"
                 },
                 {
                     name: "FAQS",
