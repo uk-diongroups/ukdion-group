@@ -17,8 +17,8 @@ const GroupIndex = () => {
         animate: {
             y: 0,
             opacity: 1,
-            scale: [1, 1, 1, 1, 1],
-            rotate: [0, 0, 360, 360, 0],
+            // scale: [1, 1, 1, 1, 1],
+            // rotate: [0, 0, 360, 360, 0],
             transition: {
                 duration: 4,
                 bounce: 0.5,

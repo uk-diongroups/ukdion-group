@@ -4,20 +4,24 @@ import { useInView } from 'react-intersection-observer'
 
 const CoreValuesSection = () => {
     const { ref, inView} = useInView({
-        threshold: 0.3
+        threshold: 0.6
     });
     const animation = useAnimation();
     useEffect(() => {
-        if(inView){
+        if(!inView){
             animation.start({
-                y: 0,
-                transition: {
-                    type: 'spring', duration: 1, bounce: 0.5
-                }
+                y: 90,
+                opacity: 0
             })
         } 
-        if(!inView) {
-            animation.start({y: '100vh'})
+        if(inView) {
+            animation.start({
+                y: 0, 
+                opacity: 1,
+                transition: {
+                    type: 'spring', duration: 4, bounce: 0.5
+                }
+            })
         }
     }, [inView])
     return (
