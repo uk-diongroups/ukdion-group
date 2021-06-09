@@ -5,7 +5,7 @@ import SubsidiariesSection from './SubsidiariesSection';
 import BuildingSection from './BuildingSection';
 import CoreValuesSection from './CoreValuesSection';
 import SplashScreen from './SplashScreen';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 
@@ -57,6 +57,7 @@ const GroupIndex = () => {
         
 //     }, [])
     
+
 
     const easing = [0.17, 0.67, 0.83, 0.67];
     const fadeInUp = {

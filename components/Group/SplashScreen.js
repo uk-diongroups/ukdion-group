@@ -3,7 +3,9 @@ import { motion } from "framer-motion"
 import Link from 'next/link';
 import GroupNavbar from '../shared/Navbar/Group.navbar';
 
+
 const SplashScreen = ({ stagger, fadeInRight, fadeInUp, setPage }) => {
+    
     return (
         <div className="bdc_navbar_background">
             <div className="containing_background_content">
