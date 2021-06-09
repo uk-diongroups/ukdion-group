@@ -32,16 +32,16 @@ import Link from 'next/link';
                 <Collapse isOpen={isOpen} navbar className="mt-3">
                     <Nav className="ml-auto group_links" navbar>
                         <NavItem>
-                            <NavLink href="#subsidiaries">Subsidaries</NavLink>
+                            <NavLink href="/#subsidiaries">Subsidiaries</NavLink>
                         </NavItem>
 
                         <NavItem>
-                            <NavLink href="#about">About us</NavLink>
+                            <NavLink href="/#about">About us</NavLink>
                         </NavItem>
 
-                        <NavItem>
+                        {/* <NavItem>
                             <NavLink href="#">Blog</NavLink>
-                        </NavItem>
+                        </NavItem> */}
 
                         {/* <NavItem>
                             <NavLink href="/">Careers</NavLink>

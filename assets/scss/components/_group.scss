@@ -4,6 +4,7 @@
 
 .pulse {
     animation: pulse-animation 2s infinite;
+    transform: scale(0.7);
   }
   
   @keyframes pulse-animation {
@@ -21,16 +22,16 @@
     display: flex;
     position: absolute;
     img{
-        width: 104px;
+        width: 90px;
     }
     .small1{
-        margin-top: 90%;
+        margin-top: 125%;
         border-radius: 50%;
     }
     .small2{
         position: relative;
-        left: 95%;
-        margin-top: 70%;
+        left: 158%;
+        margin-top: 125%;
         border-radius: 50%;
         height: fit-content;
     }
@@ -41,7 +42,6 @@
         border-radius: 50%;
     }
 }
-
 .group_header_content{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -49,10 +49,10 @@
     margin-top: 8%;
 
     h5{
-        font-family: FinancierDisplay;
+        font-family: AvenirNext;
         font-style: normal;
         font-weight: bold;
-        font-size: 80px;
+        font-size: 65px;
         width: max-content;
         line-height: 87px;
         letter-spacing: 0.03em;
@@ -69,7 +69,7 @@
     small{
         font-weight: 500;
         font-size: 16px;
-        line-height: 27px;
+        line-height: 24px;
         letter-spacing: 0.03em;
         color: #223F59;
     }
@@ -91,7 +91,7 @@
         padding-top: 1rem;
         padding-bottom: 3rem;
         h5{
-            font-family: FinancierDisplay;
+            font-family: AvenirNext;
             font-weight: normal;
             font-size: 56px;
             line-height: 61px;
@@ -139,7 +139,7 @@
     .building_details{
         margin-top:4rem;
         h5{
-            font-family: FinancierDisplay;
+            font-family: AvenirNext;
             font-weight: bold;
             font-size: 50px;
             line-height: 61px;
@@ -163,7 +163,7 @@
     height: 100vh;
     .core_values_content{
         h5{
-            font-family: FinancierDisplay;
+            font-family: AvenirNext;
             font-weight: bold;
             font-size: 51px;
             line-height: 61px;

@@ -1,6 +1,13 @@
 .real_estate {
     width: 100vw;
     // height: 100vh;
+    .real_estate_content{
+        background-image: url("../../../public/images/maps.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height:100vh;
+    }
     &-hero {
         padding: 0 5.5%;
         display: flex;
@@ -9,6 +16,13 @@
         @media only screen and (max-width: 600px){
             /*Small smartphones [325px -> 600px]*/
             flex-direction: column;
+        }
+
+        .dot{
+            margin-top: -20%;
+            margin-left: 30%;
+            z-index: 10000;
+            position: relative;
         }
         .first-half {
             
@@ -50,7 +64,7 @@
         }
         &_text {
             P {
-                font-family: FinancierDisplay;
+                font-family: AvenirNext;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 42px;
@@ -130,6 +144,11 @@
     }
     &-midSection2 {
         display: flex;
+        background-color:#F4F7F5;
+        padding: 100px;
+        .dot2{
+            background-color: black;
+        }
         &_main {
             width: 650px;
             margin: 0 auto;
@@ -160,16 +179,16 @@
                 }
             }
             .toggle_content {
-                font-style: normal;
+                background: #FFFFFF;
+                box-shadow: 0px 8px 64px rgba(0, 64, 85, 0.03);
+                border-radius: 16px;
                 font-weight: 500;
                 font-size: 17px;
                 line-height: 28px;
                 letter-spacing: 0.03em;
                 color: #223F59;
-                background: #F0F0F0;
-                opacity: 0.4;
-                border-radius: 16px;
-                padding: 15px;
+                font-style: normal;
+                padding: 4%;
                 height: 11em;
                 width: 65%;
                 @media only screen and (max-width: 600px){
@@ -188,6 +207,74 @@
         display: none;
         @media only screen and (max-width: 600px){
             display: block;
+        }
+    }
+
+    .business_area{
+        padding: 0 5.5%;
+        display: grid;
+        grid-template-columns: 70% auto;
+        grid-gap: 3%;
+        p{
+            width: 85%;
+            font-size: 17px;
+            line-height: 28px;
+            letter-spacing: 0.03em;
+            color: #223F59;
+        }
+        .business_divide{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 8%;
+            h3{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 64px;
+                letter-spacing: 0.03em;
+                color: #333333;
+                margin: 6px 0px;
+            }
+            
+            &_content{
+                label{
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 27px;
+                    letter-spacing: 0.03em;
+                    color: #0BA759;
+                    margin: 16px 0px;
+                }
+                p{
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 23px;
+                    letter-spacing: 0.03em;
+                    color: #223F59;   
+                    margin-bottom: 0;
+                }
+                .sign_dot{
+                    font-size: 40px;
+                    margin-right: 10px;
+                    width: 2%;
+                    margin-top: -2%;
+                }
+            }
+        }
+    }
+
+    .slider_section{
+        padding: 0 5.5%;
+        p{
+            font-size: 17px;
+            line-height: 28px;
+            letter-spacing: 0.03em;
+            color: #223F59;
+        }
+        &_content{
+            p{
+
+            }
         }
     }
 }
