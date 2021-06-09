@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 
-const BuildingSection = () => {
+const BuildingSection = ({ setPage, fadeInUp }) => {
     const { ref, inView} = useInView({
         threshold: 0.6
     });
@@ -29,7 +29,7 @@ const BuildingSection = () => {
     return (
         <div className="building_section" id="about" ref={ref}>
                 <div className="containing_background_content">
-                    <motion.div animate={animation} className="building">
+                    <motion.div variants={fadeInUp}  className="building">
                         <div className="building_details">
                             <small className="text-success">About us</small>
                             <h5 className="mt-3">Building Innovative For a Smart Future</h5>
@@ -49,14 +49,14 @@ const BuildingSection = () => {
                         </div>
                     </motion.div>
                     <div className="d-flex justify-content-between mt-5">
-                        <div>
-                            <p></p>
+                        <div onClick={()=>setPage(2)}>
+                            <u><a style={{ color: "#51D489", cursor: "pointer" }}>&#8592; Back</a> </u>
                         </div>
 
-                        <div className="text-right">
-                            <Link href="/#core_values" >
+                        <div className="text-right" onClick={()=>setPage(4)}>
+                            {/* <Link href="/#core_values" > */}
                                 <u><a style={{ color: "#51D489", cursor: "pointer" }}>Core Values &#8594;</a> </u>
-                            </Link>
+                            {/* </Link> */}
                         </div>
                     </div>
                 </div>

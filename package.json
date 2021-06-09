@@ -9,6 +9,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "@n8tb1t/use-scroll-position": "^2.0.3",
     "bootstrap": "^4.6.0",
     "framer-motion": "^4.1.17",
     "next": "^10.2.3",

@@ -1,14 +1,64 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import { motion } from "framer-motion"
-import GroupNavbar from '../shared/Navbar/Group.navbar';
+// import GroupNavbar from '../shared/Navbar/Group.navbar';
 import SubsidiariesSection from './SubsidiariesSection';
 import BuildingSection from './BuildingSection';
 import CoreValuesSection from './CoreValuesSection';
-
+import SplashScreen from './SplashScreen';
+import { useState } from "react";
+// import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 
 const GroupIndex = () => {
-    const easing = [0.6, -0.05, 0.01, 0.99];
+    const [currentPage, setCurrentPage] = useState(1)
+    const [screenHeight, setScreenHeight] = useState('')
+
+    // const [scrollDir, setScrollDir] = useState("");
+
+// useEffect(() => {
+//   const threshold = 0;
+//   let lastScrollY = window.pageYOffset;
+  
+//   let ticking = false;
+
+//   const updateScrollDir = () => {
+//     const scrollY = window.pageYOffset;
+
+//     if (Math.abs(scrollY - lastScrollY) < threshold) {
+//       ticking = false;
+//       return;
+//     }
+//     setScrollDir(scrollY > lastScrollY ? "scrolling down" : "scrolling up");
+//     lastScrollY = scrollY > 0 ? scrollY : 0;
+//     ticking = false;
+//   };
+
+//   const onScroll = () => {
+//     if (!ticking) {
+//       window.requestAnimationFrame(updateScrollDir);
+//       ticking = true;
+//     }
+//   };
+
+//   window.addEventListener("scroll", onScroll);
+//   console.log(scrollDir);
+//   if(scrollDir === "scrolling down" && currentPage !== 4) {
+//       setCurrentPage(currentPage + 1)
+//   }
+//   if(scrollDir === "scrolling up" && currentPage !== 1) {
+//       setCurrentPage(currentPage - 1)
+//   }
+
+//   return () => window.removeEventListener("scroll", onScroll);
+// }, [scrollDir]);
+
+//     useEffect(() => {
+//         setScreenHeight(window.innerHeight)
+        
+//     }, [])
+    
+
+    const easing = [0.17, 0.67, 0.83, 0.67];
     const fadeInUp = {
         initial: {
             y:90,
@@ -20,16 +70,26 @@ const GroupIndex = () => {
             // scale: [1, 1, 1, 1, 1],
             // rotate: [0, 0, 360, 360, 0],
             transition: {
-                duration: 4,
+                duration: 3.5,
                 bounce: 0.5,
-                ease: easing,
-                delay: 0.2
+                ease: easing
+            }
+        },
+        exit: {
+            y: 0,
+            opacity: 0,
+            // scale: [1, 1, 1, 1, 1],
+            // rotate: [0, 0, 360, 360, 0],
+            transition: {
+                duration: 3.5,
+                bounce: 0.5,
+                ease: easing
             }
         }
     }
     const fadeInRight = {
         initial: {
-            x:"-80vw",
+            x:"-50vw",
             opacity: 0
         },
         animate: {
@@ -37,8 +97,7 @@ const GroupIndex = () => {
             opacity: 1,
             transition: {
                 duration: 5,
-                ease: easing,
-                delay: 0.2
+                ease: [0.6, -0.05, 0.01, 0.99]
             }
         }
     }
@@ -46,54 +105,21 @@ const GroupIndex = () => {
         animate: {
             transition: {
                 staggerChildren: 2,
-                delay: 0.2
+                // delay: 0.2
             }
         }
     }
-    
     return (
         <motion.div exit={{opacity: 0}} initial='initial' animate='animate' className="bdc_container container-fluid p-0">
-            <div className="bdc_navbar_background">
-                <div className="containing_background_content">
-                    <GroupNavbar/>
-                    <motion.div variants={stagger} className="group_header_content">
-                        <motion.div variants={fadeInRight}>
-                            <h5>We simply add <span>value</span></h5>
-                            <small>Leading you through the successful path of investment. No guessing. We simply stay S.M.A.R.T bringing you the best returns on investment.</small>
-                        </motion.div>
-
-                        <motion.div variants={fadeInUp} className="d-none d-md-block d-lg-block text-right">
-                            <img src="/images/new_cube.svg" className="" />
-                        </motion.div>
-                        
-                        <div className="small_section">
-                            <img src="/images/small1.svg" alt="" className="small1 pulse"/>
-                        
-                            <img src="/images/small2.svg" alt="" className="small2 pulse"/>
-                        
-                            <img src="/images/small3.svg" alt="" className="small3 pulse"/>
-
-                        </div>
-                    </motion.div>
-                    
-                    <div className="d-flex justify-content-between" style={{marginTop:'5rem', marginRight: '2rem'}}>
-                        <div>
-                            <p></p>
-                        </div>
-
-                        <div>
-                            <Link href="#subsidiaries">
-                               <u><a style={{ color: "#51D489", cursor: "pointer" }}>Our subsidiaries &#8594;</a> </u>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <SubsidiariesSection />
-          
-            <BuildingSection />
-
-           <CoreValuesSection />
+            <section 
+                // style={{height: `${screenHeight === '' ? '100vh' : `${screenHeight + 50}px`}`}}
+            >
+                { currentPage === 1 && <SplashScreen setPage={setCurrentPage} stagger={stagger} fadeInRight={fadeInRight} fadeInUp={fadeInUp} /> }
+                { currentPage === 2 && <SubsidiariesSection setPage={setCurrentPage} height={screenHeight} fadeInUp={fadeInUp}/>}
+                { currentPage === 3 && <BuildingSection setPage={setCurrentPage} fadeInUp={fadeInUp}/>}
+                { currentPage === 4 && <CoreValuesSection setPage={setCurrentPage} fadeInUp={fadeInUp}/>}
+            </section>
+            
         </motion.div>
     );
 };

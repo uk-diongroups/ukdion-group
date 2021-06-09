@@ -86,6 +86,11 @@
     gud "^1.0.0"
     warning "^4.0.3"
 
+"@n8tb1t/use-scroll-position@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@n8tb1t/use-scroll-position/-/use-scroll-position-2.0.3.tgz#207c54d584285cac0954d556964f83cf5774940b"
+  integrity sha512-6GO4FHVJTMI4jbRHborzemuL6B319qh2cVLOLj8DApJhjyT71eLgANbQ4bNKSZ51zBm3uJ3WmqnyNF17eSsDyw==
+
 "@next/env@10.2.3":
   version "10.2.3"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-10.2.3.tgz#ede3bbe68cec9939c37168ea2077f9adbc68334e"

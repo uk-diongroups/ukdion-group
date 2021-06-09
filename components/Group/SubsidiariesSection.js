@@ -3,32 +3,36 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 
-const SubsidiariesSection = () => {
-    const { ref, inView} = useInView({
-        threshold: 0.4
-    });
+const SubsidiariesSection = ({ setPage, fadeInUp }) => {
+    const { ref, inView} = useInView();
     const animation = useAnimation();
     useEffect(() => {
+        if(inView) {
+            animation.start({
+                
+                y: 0, 
+                opacity: 1,
+                // transition: {
+                //     type: 'spring', duration: 10, bounce: 10
+                // }
+            })
+        }
         if(!inView){
             animation.start({
-                y: 90,
+                y: 100,
                 opacity: 0
             })
         } 
-        if(inView) {
-            animation.start({
-                y: 0, 
-                opacity: 1,
-                transition: {
-                    type: 'spring', duration: 4, bounce: 0.5
-                }
-            })
-        }
+        
     }, [inView])
+   
     return (
-        <div className="subsidaries" id="subsidiaries" ref={ref}>
-            <div className="containing_background_content">
-                <motion.div animate={animation}  className="our_subsidaries">
+        <div className="subsidaries" id="subsidiaries" ref={ref} >
+            <div className="containing_background_content" >
+                <motion.div
+                    variants={fadeInUp} 
+                    className="our_subsidaries"
+                >
                     <div>
                         <h5>Our subsidiaries</h5>
                         <small>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC)</small>
@@ -91,12 +95,14 @@ const SubsidiariesSection = () => {
 
                 <div className="d-flex justify-content-between mt-5">
                     <div>
-                        {/* <p>Scroll to navigate</p> */}
+                        <p onClick={()=>setPage(1)}>
+                            <u><a style={{ color: "#51D489", cursor: "pointer" }}>&#8592; Back</a> </u>
+                        </p>
                     </div>
 
-                    <Link href="/#about" >
+                    <p onClick={()=>setPage(3)}>
                         <u><a style={{ color: "#51D489", cursor: "pointer" }}>Learn about us &#8594;</a> </u>
-                    </Link>
+                    </p>
                 </div>
             </div>
         </div>
