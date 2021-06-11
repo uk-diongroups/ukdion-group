@@ -30,11 +30,15 @@ import {
                 <Collapse isOpen={isOpen} navbar className="mt-3">
                     <Nav className="ml-auto group_links" navbar>
                         <NavItem>
-                            <NavLink href="/#subsidiaries" onClick={()=>props.scrollTo(props.subsidiaryRef)}>Subsidiaries</NavLink>
+                            <NavLink href="/#subsidiaries" 
+                            // onClick={()=>props.scrollTo(props.subsidiaryRef)}
+                            >Subsidiaries</NavLink>
                         </NavItem>
 
                         <NavItem>
-                            <NavLink href="/#about" onClick={()=>props.scrollTo(props.aboutRef)}>About us</NavLink>
+                            <NavLink href="/#about" 
+                            // onClick={()=>props.scrollTo(props.aboutRef)}
+                            >About us</NavLink>
                         </NavItem>
 
                         {/* <NavItem>
