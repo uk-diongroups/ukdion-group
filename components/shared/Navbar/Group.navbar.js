@@ -3,13 +3,11 @@ import Image from 'next/image';
 import {
     Collapse,
     Navbar,
-    // NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
     NavLink
   } from 'reactstrap';
-import Link from 'next/link';
 
   const GroupNavbar = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,11 +30,11 @@ import Link from 'next/link';
                 <Collapse isOpen={isOpen} navbar className="mt-3">
                     <Nav className="ml-auto group_links" navbar>
                         <NavItem>
-                            <NavLink href="/#subsidiaries" onClick={()=>props.homePage && props.setPage(2)}>Subsidiaries</NavLink>
+                            <NavLink href="/#subsidiaries" onClick={()=>props.scrollTo(props.subsidiaryRef)}>Subsidiaries</NavLink>
                         </NavItem>
 
                         <NavItem>
-                            <NavLink href="/#about" onClick={()=>props.homePage && props.setPage(3)}>About us</NavLink>
+                            <NavLink href="/#about" onClick={()=>props.scrollTo(props.aboutRef)}>About us</NavLink>
                         </NavItem>
 
                         {/* <NavItem>

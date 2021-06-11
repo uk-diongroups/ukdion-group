@@ -1,26 +1,28 @@
 import { useEffect } from 'react';
+import Link from 'next/link';
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 import Footer from '../shared/Footer/Footer';
 
-const CoreValuesSection = ({ setPage, fadeInUp }) => {
+const CoreValuesSection = ({ setPage, easing }) => {
     const { ref, inView} = useInView({
-        threshold: 0.2
+        threshold: 0.5
     });
     const animation = useAnimation();
     useEffect(() => {
         if(inView) {
             animation.start({
-                y: 0, 
                 opacity: 1,
                 transition: {
-                    type: 'spring', duration: 4
+                    duration: 0.5,
+                    bounce: 0.5,
+                    ease: easing,
+                    delay: 0.2
                 }
             })
         }
         if(!inView){
             animation.start({
-                y: 90,
                 opacity: 0
             })
         } 
@@ -29,7 +31,7 @@ const CoreValuesSection = ({ setPage, fadeInUp }) => {
     return (
         <>
             <div className="core_values" id="core_values" ref={ref}>
-                <motion.div variants={fadeInUp} className="containing_background_content core_value_things">
+                <motion.div animate={animation} className="containing_background_content core_value_things">
                     <div className="core_values_content">
                         <h5>Our core <span>values</span></h5>
                         <small>UK-DION Group is a bespoke group of companies focused on delivering value in the financial Services space.Our model is focused on investment management, financial Advisory,.</small>
@@ -60,18 +62,18 @@ const CoreValuesSection = ({ setPage, fadeInUp }) => {
                             <p className="mt-2">Notable</p>
                         </div>
                     </div>
-                   
+                    
                 </motion.div>
-                <div className="d-flex justify-content-between mt-5 navControls">
+                <div className="d-flex justify-content-between navControls">
                     <div>
-                        <p onClick={()=>setPage(3)}>
+                        {/* <p onClick={()=>setPage(3)}>
                             <u><a style={{ color: "#51D489", cursor: "pointer" }}>&#8592; Previous</a> </u>
-                        </p>
+                        </p> */}
                     </div>
 
-                    <p onClick={()=>setPage(1)}>
+                    {/* <Link href="/" onClick={()=>setPage(1)}>
                         <u><a style={{ color: "#51D489", cursor: "pointer" }}>Back to top &#x02191;</a> </u>
-                    </p>
+                    </Link> */}
                 </div>
             </div>
             <Footer />

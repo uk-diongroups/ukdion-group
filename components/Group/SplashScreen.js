@@ -1,15 +1,36 @@
-import React from 'react';
-import { motion } from "framer-motion"
+import React, { useEffect } from 'react';
+import { motion, useAnimation} from "framer-motion"
 import Link from 'next/link';
+import { useInView } from 'react-intersection-observer'
 import GroupNavbar from '../shared/Navbar/Group.navbar';
 
 
-const SplashScreen = ({ stagger, fadeInRight, fadeInUp, setPage }) => {
-    
+const SplashScreen = ({ stagger, subsidiaryRef, aboutRef, fadeInRight, fadeInUp, setPage, easing, scrollTo }) => {
+    const { ref, inView} = useInView();
+    const animation = useAnimation();
+    useEffect(() => {
+        if(inView) {
+            animation.start({
+                opacity: 1,
+                transition: {
+                    duration: 0.5,
+                    bounce: 0.5,
+                    ease: easing,
+                    delay: 0.2
+                }
+            })
+        }
+        if(!inView){
+            animation.start({
+                opacity: 0
+            })
+        } 
+        
+    }, [inView])
     return (
-        <div className="bdc_navbar_background">
+        <div className="bdc_navbar_background" ref={ref}>
             <div className="containing_background_content">
-                <GroupNavbar setPage={setPage} homePage={true}/>
+                <GroupNavbar setPage={setPage} subsidiaryRef={subsidiaryRef} aboutRef={aboutRef} homePage={true} scrollTo={scrollTo} />
                 <motion.div variants={stagger} className="group_header_content">
                     <motion.div variants={fadeInRight}>
                         <h5>We simply add <span>value</span></h5>
@@ -34,11 +55,11 @@ const SplashScreen = ({ stagger, fadeInRight, fadeInUp, setPage }) => {
                         <p></p>
                     </div>
 
-                    <div onClick={()=>setPage(2)}>
-                        {/* <Link href="#subsidiaries"> */}
+                    {/* <div onClick={()=>setPage(2)}> */}
+                        <Link href="#subsidiaries">
                             <u><a style={{ color: "#51D489", cursor: "pointer" }}>Our subsidiaries &#8594;</a> </u>
-                        {/* </Link> */}
-                    </div>
+                        </Link>
+                    {/* </div> */}
                 </div>
             </div>
         </div>

@@ -3,34 +3,37 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 
-const SubsidiariesSection = ({ setPage, fadeInUp }) => {
-    const { ref, inView} = useInView();
+
+const SubsidiariesSection = ({ setPage, subsidiary }) => {
+    const { ref, inView} = useInView({
+        threshold: 0.4
+    });
+    
     const animation = useAnimation();
     useEffect(() => {
         if(inView) {
             animation.start({
-                
-                y: 0, 
                 opacity: 1,
-                // transition: {
-                //     type: 'spring', duration: 10, bounce: 10
-                // }
+                transition: {
+                    duration: 0.5,
+                    bounce: 0.5,
+                    ease: [0.6, -0.05, 0.01, 0.99],
+                    delay: 0.2
+                }
             })
         }
         if(!inView){
             animation.start({
-                y: 100,
                 opacity: 0
             })
         } 
         
     }, [inView])
-   
     return (
-        <div className="subsidaries" id="subsidiaries" ref={ref} >
-            <div className="containing_background_content" >
+        <div className="subsidaries" id="subsidiaries" ref={ref}>
+            <div className="containing_background_content">
                 <motion.div
-                    variants={fadeInUp} 
+                    animate={animation}
                     className="our_subsidaries"
                 >
                     <div>
@@ -95,14 +98,14 @@ const SubsidiariesSection = ({ setPage, fadeInUp }) => {
 
                 <div className="d-flex justify-content-between mt-5">
                     <div>
-                        <p onClick={()=>setPage(1)}>
+                        {/* <p onClick={()=>setPage(1)}>
                             <u><a style={{ color: "#51D489", cursor: "pointer" }}>&#8592; Back</a> </u>
-                        </p>
+                        </p> */}
                     </div>
 
-                    <p onClick={()=>setPage(3)}>
+                    <Link href="/#about" onClick={()=>setPage(3)}>
                         <u><a style={{ color: "#51D489", cursor: "pointer" }}>Learn about us &#8594;</a> </u>
-                    </p>
+                    </Link>
                 </div>
             </div>
         </div>

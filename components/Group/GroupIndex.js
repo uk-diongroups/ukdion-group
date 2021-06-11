@@ -5,14 +5,14 @@ import SubsidiariesSection from './SubsidiariesSection';
 import BuildingSection from './BuildingSection';
 import CoreValuesSection from './CoreValuesSection';
 import SplashScreen from './SplashScreen';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, createRef } from "react";
 // import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 
 const GroupIndex = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const [screenHeight, setScreenHeight] = useState('')
-
+    const subsidiary = createRef(null)
     // const [scrollDir, setScrollDir] = useState("");
 
 // useEffect(() => {
@@ -62,27 +62,20 @@ const GroupIndex = () => {
     const easing = [0.17, 0.67, 0.83, 0.67];
     const fadeInUp = {
         initial: {
-            y:90,
             opacity: 0
         },
         animate: {
-            y: 0,
             opacity: 1,
-            // scale: [1, 1, 1, 1, 1],
-            // rotate: [0, 0, 360, 360, 0],
             transition: {
-                duration: 3.5,
+                duration: 0.5,
                 bounce: 0.5,
                 ease: easing
             }
         },
         exit: {
-            y: 0,
             opacity: 0,
-            // scale: [1, 1, 1, 1, 1],
-            // rotate: [0, 0, 360, 360, 0],
             transition: {
-                duration: 3.5,
+                duration: 0.5,
                 bounce: 0.5,
                 ease: easing
             }
@@ -97,7 +90,7 @@ const GroupIndex = () => {
             x: 0,
             opacity: 1,
             transition: {
-                duration: 5,
+                duration: 2,
                 ease: [0.6, -0.05, 0.01, 0.99]
             }
         }
@@ -110,15 +103,23 @@ const GroupIndex = () => {
             }
         }
     }
+    const scrollTo = (ref) => {
+        window.scroll({
+          top: ref.current.offsetTop,
+          behavior: "smooth",
+        });
+    }
     return (
-        <motion.div exit={{opacity: 0}} initial='initial' animate='animate' className="bdc_container container-fluid p-0">
-            <section 
-                // style={{height: `${screenHeight === '' ? '100vh' : `${screenHeight + 50}px`}`}}
-            >
-                { currentPage === 1 && <SplashScreen setPage={setCurrentPage} stagger={stagger} fadeInRight={fadeInRight} fadeInUp={fadeInUp} /> }
-                { currentPage === 2 && <SubsidiariesSection setPage={setCurrentPage} height={screenHeight} fadeInUp={fadeInUp}/>}
-                { currentPage === 3 && <BuildingSection setPage={setCurrentPage} fadeInUp={fadeInUp}/>}
-                { currentPage === 4 && <CoreValuesSection setPage={setCurrentPage} fadeInUp={fadeInUp}/>}
+        <motion.div exit='exit' initial='initial' animate='animate' className="bdc_container container-fluid p-0">
+            <SplashScreen scrollTo={scrollTo} setPage={setCurrentPage} easing={easing} stagger={stagger} fadeInRight={fadeInRight} fadeInUp={fadeInUp} /> 
+            <section>
+               <SubsidiariesSection subsidiary={subsidiary} scrollTo={scrollTo} setPage={setCurrentPage} height={screenHeight} fadeInUp={fadeInUp}/> 
+            </section>
+            <section>
+               <BuildingSection scrollTo={scrollTo} setPage={setCurrentPage} fadeInUp={fadeInUp}/> 
+            </section>
+            <section>
+               <CoreValuesSection scrollTo={scrollTo} easing={easing} setPage={setCurrentPage} fadeInUp={fadeInUp}/> 
             </section>
             
         </motion.div>
