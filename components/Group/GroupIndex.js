@@ -6,58 +6,18 @@ import BuildingSection from './BuildingSection';
 import CoreValuesSection from './CoreValuesSection';
 import SplashScreen from './SplashScreen';
 import { useState, useEffect, useRef, createRef } from "react";
+import Footer from "../shared/Footer/Footer";
+import { useInView } from 'react-intersection-observer'
 // import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 
 const GroupIndex = () => {
     const [currentPage, setCurrentPage] = useState(1)
+    const [subsidiaryPosition, setSubsidiaryPosition] = useState(null)
     const [screenHeight, setScreenHeight] = useState('')
     const subsidiary = createRef(null)
+    const { ref, inView} = useInView();
     // const [scrollDir, setScrollDir] = useState("");
-
-// useEffect(() => {
-//   const threshold = 0;
-//   let lastScrollY = window.pageYOffset;
-  
-//   let ticking = false;
-
-//   const updateScrollDir = () => {
-//     const scrollY = window.pageYOffset;
-
-//     if (Math.abs(scrollY - lastScrollY) < threshold) {
-//       ticking = false;
-//       return;
-//     }
-//     setScrollDir(scrollY > lastScrollY ? "scrolling down" : "scrolling up");
-//     lastScrollY = scrollY > 0 ? scrollY : 0;
-//     ticking = false;
-//   };
-
-//   const onScroll = () => {
-//     if (!ticking) {
-//       window.requestAnimationFrame(updateScrollDir);
-//       ticking = true;
-//     }
-//   };
-
-//   window.addEventListener("scroll", onScroll);
-//   console.log(scrollDir);
-//   if(scrollDir === "scrolling down" && currentPage !== 4) {
-//       setCurrentPage(currentPage + 1)
-//   }
-//   if(scrollDir === "scrolling up" && currentPage !== 1) {
-//       setCurrentPage(currentPage - 1)
-//   }
-
-//   return () => window.removeEventListener("scroll", onScroll);
-// }, [scrollDir]);
-
-//     useEffect(() => {
-//         setScreenHeight(window.innerHeight)
-        
-//     }, [])
-    
-
 
     const easing = [0.17, 0.67, 0.83, 0.67];
     const fadeInUp = {
@@ -103,27 +63,33 @@ const GroupIndex = () => {
             }
         }
     }
-    const scrollTo = (ref) => {
+    const scrollTo = () => {
         window.scroll({
-          top: ref.current.offsetTop,
+          top: 729,
           behavior: "smooth",
         });
     }
     return (
-        <motion.div exit='exit' initial='initial' animate='animate' className="bdc_container container-fluid p-0">
-            <SplashScreen scrollTo={scrollTo} setPage={setCurrentPage} easing={easing} stagger={stagger} fadeInRight={fadeInRight} fadeInUp={fadeInUp} /> 
-            <section>
-               <SubsidiariesSection subsidiary={subsidiary} scrollTo={scrollTo} setPage={setCurrentPage} height={screenHeight} fadeInUp={fadeInUp}/> 
-            </section>
-            <section>
-               <BuildingSection scrollTo={scrollTo} setPage={setCurrentPage} fadeInUp={fadeInUp}/> 
-            </section>
-            <section>
-               <CoreValuesSection scrollTo={scrollTo} easing={easing} setPage={setCurrentPage} fadeInUp={fadeInUp}/> 
+        <motion.div exit='exit' initial='initial' animate='animate' className="bdc_container container-fluid p-0" id="groupIndex">
+            <section className="groupSection">
+             <SplashScreen showDottedImages={inView} subsidiaryPosition={subsidiaryPosition} scrollTo={scrollTo} contentRef={ref} setPage={setCurrentPage} easing={easing} stagger={stagger} fadeInRight={fadeInRight} fadeInUp={fadeInUp} />    
             </section>
             
+            <section className="groupSection">
+               <SubsidiariesSection setSubsidiaryPosition={setSubsidiaryPosition} subsidiary={subsidiary} scrollTo={scrollTo} setPage={setCurrentPage} height={screenHeight} fadeInUp={fadeInUp}/> 
+            </section>
+            <section className="groupSection">
+               <BuildingSection scrollTo={scrollTo} setPage={setCurrentPage} fadeInUp={fadeInUp}/> 
+            </section>
+            <section className="groupSection">
+               <CoreValuesSection scrollTo={scrollTo} easing={easing} setPage={setCurrentPage} fadeInUp={fadeInUp}/> 
+            </section>
+            <section className="groupSection" style={{background: "#F0F4F8", display: "flex", flexDirection: "column-reverse"}}>
+             <Footer />   
+            </section>
         </motion.div>
     );
+
 };
 
 export default GroupIndex;

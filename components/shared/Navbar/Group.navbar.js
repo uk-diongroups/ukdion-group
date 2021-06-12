@@ -31,7 +31,7 @@ import {
                     <Nav className="ml-auto group_links" navbar>
                         <NavItem>
                             <NavLink href="/#subsidiaries" 
-                            // onClick={()=>props.scrollTo(props.subsidiaryRef)}
+                            onClick={()=>props.scrollTo(props.subsidiaryRef)}
                             >Subsidiaries</NavLink>
                         </NavItem>
 

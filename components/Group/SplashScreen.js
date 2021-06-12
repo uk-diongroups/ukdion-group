@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer'
 import GroupNavbar from '../shared/Navbar/Group.navbar';
 
 
-const SplashScreen = ({ stagger, subsidiaryRef, aboutRef, fadeInRight, fadeInUp, setPage, easing, scrollTo }) => {
+const SplashScreen = ({ subsidiaryPosition, stagger, showDottedImages, subsidiaryRef, contentRef, aboutRef, fadeInRight, fadeInUp, setPage, easing, scrollTo }) => {
     const { ref, inView} = useInView();
     const animation = useAnimation();
     useEffect(() => {
@@ -30,8 +30,8 @@ const SplashScreen = ({ stagger, subsidiaryRef, aboutRef, fadeInRight, fadeInUp,
     return (
         <div className="bdc_navbar_background" ref={ref}>
             <div className="containing_background_content">
-                <GroupNavbar setPage={setPage} subsidiaryRef={subsidiaryRef} aboutRef={aboutRef} homePage={true} scrollTo={scrollTo} />
-                <motion.div variants={stagger} className="group_header_content">
+                <GroupNavbar setPage={setPage} subsidiaryRef={subsidiaryPosition} aboutRef={aboutRef} homePage={true} scrollTo={scrollTo} />
+                <motion.div variants={stagger} className="group_header_content" ref={contentRef}>
                     <motion.div variants={fadeInRight}>
                         <h5>We simply add <span>value</span></h5>
                         <small>Leading you through the successful path of investment. No guessing. We simply stay S.M.A.R.T bringing you the best returns on investment.</small>
@@ -41,13 +41,13 @@ const SplashScreen = ({ stagger, subsidiaryRef, aboutRef, fadeInRight, fadeInUp,
                         <img src="/images/new_cube.svg" className="" />
                     </motion.div>
                     
-                    <div className="small_section">
+                    {showDottedImages && <div className="small_section">
                         <img src="/images/small1.png" alt="" className="small1 pulse"/>
                     
                         <img src="/images/small2.png" alt="" className="small2 pulse"/>
                     
                         <img src="/images/small3.png" alt="" className="small3 pulse"/>
-                    </div>
+                    </div>}
                 </motion.div>
             
                 <div className="d-flex justify-content-between" style={{marginTop:'5rem', marginRight: '2rem'}}>

@@ -1,13 +1,14 @@
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 
 
-const SubsidiariesSection = ({ setPage, subsidiary }) => {
+const SubsidiariesSection = ({ setSubsidiaryPosition, setPage, subsidiary }) => {
     const { ref, inView} = useInView({
         threshold: 0.4
     });
+    const subsidiaryRef = useRef()
     
     const animation = useAnimation();
     useEffect(() => {
@@ -29,9 +30,13 @@ const SubsidiariesSection = ({ setPage, subsidiary }) => {
         } 
         
     }, [inView])
+    useEffect(() => {
+        setSubsidiaryPosition(subsidiaryRef.current.offsetTop)
+    }, [])
+    
     return (
         <div className="subsidaries" id="subsidiaries" ref={ref}>
-            <div className="containing_background_content">
+            <div className="containing_background_content" ref={subsidiaryRef}>
                 <motion.div
                     animate={animation}
                     className="our_subsidaries"

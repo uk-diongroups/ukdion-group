@@ -76,7 +76,7 @@ const CoreValuesSection = ({ setPage, easing }) => {
                     </Link> */}
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 };

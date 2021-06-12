@@ -17,7 +17,25 @@
   }
   
   
+#groupIndex {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    .groupSection {
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+}
 
+.navControls {
+    padding: 0 6rem;
+}
+.group_header_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 2.0em;
+    margin-top: 8%;
 .small_section{
     display: flex;
     position: absolute;
@@ -42,15 +60,6 @@
         border-radius: 50%;
     }
 }
-.navControls {
-    padding: 0 6rem;
-}
-.group_header_content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 2.0em;
-    margin-top: 8%;
-
     h5{
         font-family: FinancierDisplay;
         font-style: normal;
