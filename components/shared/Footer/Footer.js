@@ -124,7 +124,7 @@ const Footer = () => {
         // }
     ]
     return (
-        <footer className="footer">
+        <footer className="footer" id='footer'>
             <Col md={12} className="footer_content">
                 <Row  className="pt-4">
                     <Col md={6}>

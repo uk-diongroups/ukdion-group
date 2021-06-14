@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+// import { Link, animateScroll as scroll } from "react-scroll";
 import {
     Collapse,
     Navbar,
-    // NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
     NavLink
   } from 'reactstrap';
-import Link from 'next/link';
 
   const GroupNavbar = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,12 +31,24 @@ import Link from 'next/link';
                 <Collapse isOpen={isOpen} navbar className="mt-3">
                     <Nav className="ml-auto group_links" navbar>
                         <NavItem>
-                            <NavLink href="/#subsidiaries">Subsidiaries</NavLink>
+                            <NavLink href="/#subsidiaries" 
+                            onClick={()=>props.scrollTo(props.subsidiaryRef)}
+                            >Subsidiaries</NavLink>
                         </NavItem>
 
                         <NavItem>
-                            <NavLink href="/#about">About us</NavLink>
+                            <NavLink href="/#about" 
+                            // onClick={()=>props.scrollTo(props.aboutRef)}
+                            >About us</NavLink>
                         </NavItem>
+                        {/* <Link
+                            activeClass="active"
+                            to="footer"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >To bottom</Link> */}
 
                         {/* <NavItem>
                             <NavLink href="#">Blog</NavLink>
