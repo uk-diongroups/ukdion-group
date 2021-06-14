@@ -17,7 +17,6 @@ const GroupIndex = () => {
     const [screenHeight, setScreenHeight] = useState('')
     const subsidiary = createRef(null)
     const { ref, inView} = useInView();
-    // const [scrollDir, setScrollDir] = useState("");
 
     const easing = [0.17, 0.67, 0.83, 0.67];
     const fadeInUp = {
@@ -27,7 +26,6 @@ const GroupIndex = () => {
         animate: {
             opacity: 1,
             transition: {
-                duration: 0.5,
                 bounce: 0.5,
                 ease: easing
             }
@@ -35,7 +33,6 @@ const GroupIndex = () => {
         exit: {
             opacity: 0,
             transition: {
-                duration: 0.5,
                 bounce: 0.5,
                 ease: easing
             }

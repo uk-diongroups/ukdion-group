@@ -54,10 +54,10 @@ const BuildingSection = ({ setPage }) => {
                         {/* <u><a style={{ color: "#51D489", cursor: "pointer" }}>&#8592; Back</a> </u> */}
                     </div>
 
-                    <div className="text-right" onClick={()=>setPage(4)}>
-                        {/* <Link href="/#core_values" > */}
+                    <div className="text-right">
+                        <Link href="/#core_values" >
                             <u><a style={{ color: "#51D489", cursor: "pointer" }}>Core Values &#8594;</a> </u>
-                        {/* </Link> */}
+                        </Link>
                     </div>
                 </div>
             </div>
