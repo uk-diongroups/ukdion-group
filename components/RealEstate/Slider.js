@@ -71,8 +71,8 @@ const Slider = (props) => {
       <style>
         {
           `.custom-tag {
-              max-width: 90%;
-              margin-left: 5%;
+              max-width: 100%;
+              // margin-left: 5%;
               height: 465px;
               border-radius: 22px;
               background: url("../../assets/images/sliderImage.png");
