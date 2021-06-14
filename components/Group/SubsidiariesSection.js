@@ -1,30 +1,46 @@
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 
-const SubsidiariesSection = () => {
+
+const SubsidiariesSection = ({ setSubsidiaryPosition, setPage, subsidiary }) => {
     const { ref, inView} = useInView({
-        threshold: 0.3
+        threshold: 0.4
     });
+    const subsidiaryRef = useRef()
+    
     const animation = useAnimation();
     useEffect(() => {
-        if(inView){
+        if(inView) {
             animation.start({
-                x: 0,
+                opacity: 1,
                 transition: {
-                    type: 'spring', duration: 1, bounce: 0.5
+                    duration: 0.5,
+                    bounce: 0.5,
+                    ease: [0.6, -0.05, 0.01, 0.99],
+                    delay: 0.2
                 }
             })
-        } 
-        if(!inView) {
-            animation.start({x: '-100vw'})
         }
+        if(!inView){
+            animation.start({
+                opacity: 0
+            })
+        } 
+        
     }, [inView])
+    useEffect(() => {
+        setSubsidiaryPosition(subsidiaryRef.current.offsetTop)
+    }, [])
+    
     return (
         <div className="subsidaries" id="subsidiaries" ref={ref}>
-            <div className="containing_background_content">
-                <motion.div animate={animation}  className="our_subsidaries">
+            <div className="containing_background_content" ref={subsidiaryRef}>
+                <motion.div
+                    animate={animation}
+                    className="our_subsidaries"
+                >
                     <div>
                         <h5>Our subsidiaries</h5>
                         <small>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC)</small>
@@ -87,10 +103,12 @@ const SubsidiariesSection = () => {
 
                 <div className="d-flex justify-content-between mt-5">
                     <div>
-                        {/* <p>Scroll to navigate</p> */}
+                        {/* <p onClick={()=>setPage(1)}>
+                            <u><a style={{ color: "#51D489", cursor: "pointer" }}>&#8592; Back</a> </u>
+                        </p> */}
                     </div>
 
-                    <Link href="/#about" >
+                    <Link href="/#about" onClick={()=>setPage(3)}>
                         <u><a style={{ color: "#51D489", cursor: "pointer" }}>Learn about us &#8594;</a> </u>
                     </Link>
                 </div>

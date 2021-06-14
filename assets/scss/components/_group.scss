@@ -17,7 +17,25 @@
   }
   
   
+#groupIndex {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    .groupSection {
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+}
 
+.navControls {
+    padding: 0 6rem;
+}
+.group_header_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 2.0em;
+    margin-top: 8%;
 .small_section{
     display: flex;
     position: absolute;
@@ -42,14 +60,8 @@
         border-radius: 50%;
     }
 }
-.group_header_content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 2.0em;
-    margin-top: 8%;
-
     h5{
-        font-family: AvenirNext;
+        font-family: FinancierDisplay;
         font-style: normal;
         font-weight: bold;
         font-size: 65px;
@@ -91,7 +103,7 @@
         padding-top: 1rem;
         padding-bottom: 3rem;
         h5{
-            font-family: AvenirNext;
+            font-family: FinancierDisplay;
             font-weight: normal;
             font-size: 56px;
             line-height: 61px;
@@ -139,7 +151,7 @@
     .building_details{
         margin-top:4rem;
         h5{
-            font-family: AvenirNext;
+            font-family: FinancierDisplay;
             font-weight: bold;
             font-size: 50px;
             line-height: 61px;
@@ -163,7 +175,7 @@
     height: 100vh;
     .core_values_content{
         h5{
-            font-family: AvenirNext;
+            font-family: FinancierDisplay;
             font-weight: bold;
             font-size: 51px;
             line-height: 61px;
@@ -191,7 +203,7 @@
     .core_value_things{
         width: 55%;
         padding-top: 10rem;
-        padding-bottom: 15rem;
+        padding-bottom: 10rem;
         margin-left: auto !important;
         margin-right: auto !important;
         text-align: center;
