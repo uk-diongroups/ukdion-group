@@ -7,7 +7,7 @@ const Management = () => {
                 <img src="../images/ofurum.jpg" alt=""/>
                 <div className="text-center">
                     <p className="board_name">Chinonye V.Ofurum</p>
-                    <p className="board_position">Chief Investment Officer</p>
+                    <p className="board_position">Head, Human Resources</p>
                 </div>
             </div>
 
