@@ -45,8 +45,8 @@ const Footer = () => {
                     link: "/"
                 },
                 {
-                    name: "Real Estate",
-                    link: "/real_estate"
+                    name: "Dion Homes",
+                    link: "/dion_homes"
                 }
             ]
         },

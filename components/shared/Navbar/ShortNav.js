@@ -5,12 +5,17 @@ import Link from "next/link"
 const ShortNav = () => {
     return (
         <nav className="short_nav">
-            <Image
-                src="/company-logo.png"
-                alt="Company logo"
-                width={70}
-                height={70}
-            /> 
+            <Link href="/">
+                <a>
+                    <Image
+                        src="/second_logo.svg"
+                        alt="Company logo"
+                        width={70}
+                        height={70}
+                    />   
+                </a>
+            </Link>
+            
             <ul>
                 <li className="mr2 group_links">
                     <Link href="/">

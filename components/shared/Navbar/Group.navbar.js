@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-// import { Link, animateScroll as scroll } from "react-scroll";
 import {
     Collapse,
     Navbar,
@@ -13,19 +12,21 @@ import {
   const GroupNavbar = (props) => {
     const [isOpen, setIsOpen] = useState(false);
   
-    const toggle = () => setIsOpen(!isOpen);
     return (
         <div className="bdc_navbar">
             <div className="navbarr">
             <Navbar  expand="md">
                 <NavbarBrand href="/" className="mr-auto" tag={()=>
+                <NavLink href="/">
                     <Image
                         src="/second_logo.svg"
                         alt="Company logo"
                         width={120}
                         height={90}
                         style={{marginTop:'-30px'}}
-                    />}>   
+                    /> 
+                </NavLink>
+                }>
                 </NavbarBrand>
                 
                 <Collapse isOpen={isOpen} navbar className="mt-3">

@@ -86,7 +86,7 @@ const SubsidiariesSection = ({ setSubsidiaryPosition, setPage, subsidiary }) => 
                             <div></div>
 
                             <div className="border-top-0 border-left p-3 borderful">
-                                <Link href="/real_estate">
+                                <Link href="/dion_homes">
                                     <a>
                                         <img src="../images/group_1.svg" alt="" />
                                         <p>Real estate</p>  

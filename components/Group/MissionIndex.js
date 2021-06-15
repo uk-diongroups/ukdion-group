@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, Fragment} from 'react';
 import GroupNavbar from '../shared/Navbar/Group.navbar';
 import Boards from './Boards';
 import Management from './Management';
@@ -61,10 +61,6 @@ const Mission = () => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* <div className="text-right">
-                            <img src="../images/group_35.png" className="group_img" alt=""/>
-                        </div> */}
                     </div>
                     <div className="mission mx-auto col-lg-6">
                         <div className="our_mission">
@@ -89,12 +85,12 @@ const Mission = () => {
                 <div className="d-flex justify-content-between w-25 m-auto">
                     {
                         tabsOption.map(tab =>(
-                            <React.Fragment key={tab.name}>
+                            <Fragment key={tab.name}>
                                 <div className="text-center" style={{cursor:'pointer'}}>
                                     <li onClick={()=>setTabs(tab.name)} className={tabs === tab.name ? "active" : ""}>{tab.name}</li>
                                     {tab.name === tabs ? <p className="dotted">&#46;</p> : ''}
                                 </div>
-                            </React.Fragment>
+                            </Fragment>
                         ))
                     }
                 </div>
