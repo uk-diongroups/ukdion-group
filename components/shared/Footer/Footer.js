@@ -100,27 +100,6 @@ const Footer = () => {
         //             link: "/"
         //         }
         //     ]
-        // },
-        // {
-        //     head: "INVESTMENT PLANS",
-        //     routes: [
-        //         {
-        //             name: "Smart savers",
-        //             link: "/"
-        //         },
-        //         {
-        //             name: "Prime capital",
-        //             link: "/"
-        //         },
-        //         {
-        //             name: "Child trust fund",
-        //             link: "/"
-        //         },
-        //         {
-        //             name: "Investment club",
-        //             link: "/"
-        //         }
-        //     ]
         // }
     ]
     return (
