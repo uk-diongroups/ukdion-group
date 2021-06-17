@@ -65,11 +65,8 @@ const BuildingSection = ({ easing }) => {
                     <div className="building_details">
                         <small className="text-success">About us</small>
                         <motion.h5 animate={headerAnimation} className="mt-3">Building Innovative For a Smart Future</motion.h5>
-                         
                         
-                        
-                            <motion.p animate={animation}>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC). Our philosophy is to provide our clients with the best independent advice on their investments and help them get the best value for their money.</motion.p>   
-                        
+                        <motion.p animate={animation}>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC) and the Central Bank of Nigeria (CBN)</motion.p>
                         
                         <Link href="/about">
                                 <a>

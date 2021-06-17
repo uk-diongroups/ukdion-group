@@ -29,7 +29,7 @@ const Footer = () => {
             head: "PRODUCTS",
             routes: [
                 {
-                    name: "Investment",
+                    name: "UkDion Investments",
                     link: "/"
                 },
                 {
