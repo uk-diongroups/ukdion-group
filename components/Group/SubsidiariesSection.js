@@ -1,52 +1,76 @@
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 
 
-const SubsidiariesSection = ({ setSubsidiaryPosition, setPage, subsidiary }) => {
+const SubsidiariesSection = ({ setPage, easing }) => {
     const { ref, inView} = useInView({
-        threshold: 0.4
+        threshold: 0.2
     });
-    const subsidiaryRef = useRef()
     
     const animation = useAnimation();
+    const headerAnimation = useAnimation();
+    const imageAnimation = useAnimation();
     useEffect(() => {
         if(inView) {
             animation.start({
                 opacity: 1,
+                y: 0,
                 transition: {
-                    duration: 0.5,
+                    duration: 1.5,
                     bounce: 0.5,
-                    ease: [0.6, -0.05, 0.01, 0.99],
+                    ease: easing,
+                    delay: 0.8
+                }
+            })
+            headerAnimation.start({
+                opacity: 1,
+                y: 0,
+                transition: {
+                    duration: 1,
+                    bounce: 0.5,
+                    ease: easing,
                     delay: 0.2
+                }
+            })
+            imageAnimation.start({
+                opacity: 1,
+                transition: {
+                    duration: 1.5,
+                    bounce: 0.5,
+                    ease: easing,
+                    delay: 0.8
                 }
             })
         }
         if(!inView){
             animation.start({
+                opacity: 0,
+                y: "100vh"
+            })
+            headerAnimation.start({
+                opacity: 0,
+                y: "100vh"
+            })
+            imageAnimation.start({
                 opacity: 0
             })
         } 
         
     }, [inView])
-    useEffect(() => {
-        setSubsidiaryPosition(subsidiaryRef.current.offsetTop)
-    }, [])
-    
     return (
         <div className="subsidaries" id="subsidiaries" ref={ref}>
-            <div className="containing_background_content" ref={subsidiaryRef}>
-                <motion.div
-                    animate={animation}
+            <div className="containing_background_content">
+                <div
                     className="our_subsidaries"
                 >
                     <div>
-                        <h5>Our subsidiaries</h5>
-                        <small>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC)</small>
+                        <motion.h5 animate={headerAnimation}>Our subsidiaries</motion.h5>
+                        <motion.div animate={animation}><small>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC)</small></motion.div>
                         <br />
                         <br />
-                        <div className="borderless_box mt-4">
+                        <motion.div animate={animation} className="borderless_box mt-4">
                             <div className="border-top-0 border-right border-bottom pl-0 pr-3 py-3 borderful">
                                 <Link href="/">
                                     <a>
@@ -89,23 +113,21 @@ const SubsidiariesSection = ({ setSubsidiaryPosition, setPage, subsidiary }) => 
                                 <Link href="/dion_homes">
                                     <a>
                                         <img src="../images/group_1.svg" alt="" />
-                                        <p>Real estate</p>  
+                                        <p>Dion Homes</p>  
                                     </a>
                                 </Link>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
 
-                    <div className="text-right my-auto">
+                    <motion.div animate={imageAnimation} className="text-right my-auto">
                         <img src="../images/globe_1.svg" className="globe" alt="" width="60%"/>
-                    </div>
-                </motion.div>
+                    </motion.div>
+                </div>
 
                 <div className="d-flex justify-content-between mt-5">
                     <div>
-                        {/* <p onClick={()=>setPage(1)}>
-                            <u><a style={{ color: "#51D489", cursor: "pointer" }}>&#8592; Back</a> </u>
-                        </p> */}
+                        
                     </div>
 
                     <Link href="/#about" onClick={()=>setPage(3)}>

@@ -63,7 +63,7 @@ const RHheader = () => {
                 <div>
                     <small className="text-success">BUSINESS AREA</small>
                     <h3 className="my-3">How we can serve you</h3>
-                    <p>The UK-DION Residences is set to change the face of Real Estate Development in Nigeria by delivering homes that combine high class architectural design with exotic environmentally friendly finishes.</p>
+                    <p>The UK-DION Homes is set to change the face of Real Estate Development in Nigeria by delivering homes that combine high class architectural design with exotic environmentally friendly finishes.</p>
                     <div className="business_divide p-0">
                         <div className="business_divide_content">
                             <div>

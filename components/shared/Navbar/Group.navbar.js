@@ -33,23 +33,13 @@ import {
                     <Nav className="ml-auto group_links" navbar>
                         <NavItem>
                             <NavLink href="/#subsidiaries" 
-                            // onClick={()=>props.scrollTo(props.subsidiaryRef)}
                             >Subsidiaries</NavLink>
                         </NavItem>
 
                         <NavItem>
-                            <NavLink href="/#about" 
-                            // onClick={()=>props.scrollTo(props.aboutRef)}
+                            <NavLink href="/#about"
                             >About us</NavLink>
                         </NavItem>
-                        {/* <Link
-                            activeClass="active"
-                            to="footer"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                        >To bottom</Link> */}
 
                         {/* <NavItem>
                             <NavLink href="#">Blog</NavLink>

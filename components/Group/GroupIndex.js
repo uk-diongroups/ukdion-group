@@ -5,12 +5,14 @@ import SubsidiariesSection from './SubsidiariesSection';
 import BuildingSection from './BuildingSection';
 import CoreValuesSection from './CoreValuesSection';
 import SplashScreen from './SplashScreen';
-import { useState, useEffect, useRef, createRef } from "react";
+import { useState, createRef } from "react";
 import Footer from "../shared/Footer/Footer";
 import { useInView } from 'react-intersection-observer'
+import { Swiper, SwiperSlide, SwiperWrapper } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination } from 'swiper'
 // import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
-
+SwiperCore.use([Navigation, Pagination])
 const GroupIndex = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const [subsidiaryPosition, setSubsidiaryPosition] = useState(null)
@@ -67,24 +69,35 @@ const GroupIndex = () => {
         });
     }
     return (
-        <motion.div exit='exit' initial='initial' animate='animate' className="bdc_container container-fluid p-0" id="groupIndex">
-            <section className="groupSection">
-             <SplashScreen showDottedImages={inView} subsidiaryPosition={subsidiaryPosition} scrollTo={scrollTo} contentRef={ref} setPage={setCurrentPage} easing={easing} stagger={stagger} fadeInRight={fadeInRight} fadeInUp={fadeInUp} />    
-            </section>
+        <Swiper
+            spaceBetween={0}
+            slidesPerView={1}
+            direction="vertical"
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
+            tag="div"
+            className="bdc_container container-fluid p-0" id="groupIndex"
+        >
             
-            <section className="groupSection">
-               <SubsidiariesSection setSubsidiaryPosition={setSubsidiaryPosition} subsidiary={subsidiary} scrollTo={scrollTo} setPage={setCurrentPage} height={screenHeight} fadeInUp={fadeInUp}/> 
-            </section>
-            <section className="groupSection">
-               <BuildingSection scrollTo={scrollTo} setPage={setCurrentPage} fadeInUp={fadeInUp}/> 
-            </section>
-            <section className="groupSection">
-               <CoreValuesSection scrollTo={scrollTo} easing={easing} setPage={setCurrentPage} fadeInUp={fadeInUp}/> 
-            </section>
-            <section className="groupSection" style={{background: "#F0F4F8", display: "flex", flexDirection: "column-reverse"}}>
-             <Footer />   
-            </section>
-        </motion.div>
+            <SwiperSlide className="groupSection" id="swiper1" tag="section">
+                <SplashScreen showDottedImages={inView} subsidiaryPosition={subsidiaryPosition} scrollTo={scrollTo} contentRef={ref} setPage={setCurrentPage} easing={easing} stagger={stagger} fadeInRight={fadeInRight} fadeInUp={fadeInUp} />    
+            </SwiperSlide>
+            <SwiperSlide className="groupSection" id="swiper2" tag="section">
+                <SubsidiariesSection setSubsidiaryPosition={setSubsidiaryPosition} subsidiary={subsidiary} scrollTo={scrollTo} setPage={setCurrentPage} height={screenHeight} fadeInUp={fadeInUp}/> 
+            </SwiperSlide>
+            <SwiperSlide className="groupSection" id="swiper3" tag="section">
+                <BuildingSection scrollTo={scrollTo} setPage={setCurrentPage} fadeInUp={fadeInUp}/> 
+            </SwiperSlide>
+            <SwiperSlide className="groupSection" id="swiper4" tag="section">
+                <CoreValuesSection scrollTo={scrollTo} easing={easing} setPage={setCurrentPage} fadeInUp={fadeInUp}/> 
+            </SwiperSlide>
+            <SwiperSlide id="swiper5" tag="section" className="groupSection" style={{background: "#F0F4F8", display: "flex", flexDirection: "column-reverse"}}>
+                <Footer />
+            </SwiperSlide>
+        </Swiper>
     );
 
 };

@@ -1,42 +1,70 @@
 import { useEffect } from 'react';
-import Link from 'next/link';
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
-import Footer from '../shared/Footer/Footer';
 
-const CoreValuesSection = ({ setPage, easing }) => {
+
+const CoreValuesSection = ({ easing }) => {
     const { ref, inView} = useInView({
-        threshold: 0.5
+        threshold: 0.2
     });
     const animation = useAnimation();
+    const headerAnimation = useAnimation();
+    const imageAnimation = useAnimation();
     useEffect(() => {
         if(inView) {
             animation.start({
                 opacity: 1,
+                y: 0,
                 transition: {
-                    duration: 0.5,
+                    duration: 1.5,
+                    bounce: 0.5,
+                    ease: easing,
+                    delay: 0.8
+                }
+            })
+            headerAnimation.start({
+                opacity: 1,
+                y: 0,
+                transition: {
+                    duration: 1,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.2
                 }
             })
+            imageAnimation.start({
+                opacity: 1,
+                transition: {
+                    duration: 1.5,
+                    bounce: 0.5,
+                    ease: easing,
+                    delay: 0.8
+                }
+            })
         }
         if(!inView){
             animation.start({
+                opacity: 0,
+                y: "100vh"
+            })
+            headerAnimation.start({
+                opacity: 0,
+                y: "100vh"
+            })
+            imageAnimation.start({
                 opacity: 0
             })
         } 
         
     }, [inView])
     return (
-        <>
             <div className="core_values" id="core_values" ref={ref}>
-                <motion.div animate={animation} className="containing_background_content core_value_things">
+                <div className="containing_background_content core_value_things">
                     <div className="core_values_content">
-                        <h5>Our core <span>values</span></h5>
-                        <small>UK-DION Group is a bespoke group of companies focused on delivering value in the financial Services space.Our model is focused on investment management, financial Advisory,.</small>
+                        <motion.h5 animate={headerAnimation}>Our core <span>values</span></motion.h5>
+                        <motion.small animate={animation}>UK-DION Group is a bespoke group of companies focused on delivering value in the financial Services space. Our model is focused on investment management, financial Advisory.</motion.small>
                     </div>
-                    <div className="core_value_icons mt-5">
+                    <motion.div animate={imageAnimation} className="core_value_icons mt-5">
                         <div>
                             <img src="../images/time-is-money.png" alt="" />
                             <p className="mt-2">United</p>
@@ -61,23 +89,13 @@ const CoreValuesSection = ({ setPage, easing }) => {
                             <img src="../images/goal.png" alt="" />
                             <p className="mt-2">Notable</p>
                         </div>
-                    </div>
+                    </motion.div>
                     
-                </motion.div>
+                </div>
                 <div className="d-flex justify-content-between navControls">
-                    <div>
-                        {/* <p onClick={()=>setPage(3)}>
-                            <u><a style={{ color: "#51D489", cursor: "pointer" }}>&#8592; Previous</a> </u>
-                        </p> */}
-                    </div>
-
-                    {/* <Link href="/" onClick={()=>setPage(1)}>
-                        <u><a style={{ color: "#51D489", cursor: "pointer" }}>Back to top &#x02191;</a> </u>
-                    </Link> */}
+                    
                 </div>
             </div>
-            {/* <Footer /> */}
-        </>
     );
 };
 
