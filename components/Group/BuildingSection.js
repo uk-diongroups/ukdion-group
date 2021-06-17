@@ -17,7 +17,7 @@ const BuildingSection = ({ easing }) => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                    duration: 1.5,
+                    duration: 3,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.8
@@ -27,7 +27,7 @@ const BuildingSection = ({ easing }) => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                    duration: 1,
+                    duration: 2.5,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.2
@@ -36,7 +36,7 @@ const BuildingSection = ({ easing }) => {
             imageAnimation.start({
                 opacity: 1,
                 transition: {
-                    duration: 1.5,
+                    duration: 3,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.8

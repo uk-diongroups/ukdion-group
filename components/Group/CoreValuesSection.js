@@ -16,7 +16,7 @@ const CoreValuesSection = ({ easing }) => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                    duration: 1.5,
+                    duration: 3,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.8
@@ -26,7 +26,7 @@ const CoreValuesSection = ({ easing }) => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                    duration: 1,
+                    duration: 2.5,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.2
@@ -35,10 +35,10 @@ const CoreValuesSection = ({ easing }) => {
             imageAnimation.start({
                 opacity: 1,
                 transition: {
-                    duration: 1.5,
+                    duration: 6.5,
                     bounce: 0.5,
                     ease: easing,
-                    delay: 0.8
+                    delay: 1
                 }
             })
         }
@@ -62,7 +62,7 @@ const CoreValuesSection = ({ easing }) => {
                 <div className="containing_background_content core_value_things">
                     <div className="core_values_content">
                         <motion.h5 animate={headerAnimation}>Our core <span>values</span></motion.h5>
-                        <motion.small animate={animation}>UK-DION Group is a bespoke group of companies focused on delivering value in the financial Services space. Our model is focused on investment management, financial Advisory.</motion.small>
+                        <motion.div animate={animation}><small>UK-DION Group is a bespoke group of companies focused on delivering value in the financial Services space. Our model is focused on investment management, financial Advisory.</small></motion.div>
                     </div>
                     <motion.div animate={imageAnimation} className="core_value_icons mt-5">
                         <div>

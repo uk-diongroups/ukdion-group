@@ -18,7 +18,7 @@ const SubsidiariesSection = ({ setPage, easing }) => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                    duration: 1.5,
+                    duration: 3,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.8
@@ -28,7 +28,7 @@ const SubsidiariesSection = ({ setPage, easing }) => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                    duration: 1,
+                    duration: 2.5,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.2
@@ -37,7 +37,7 @@ const SubsidiariesSection = ({ setPage, easing }) => {
             imageAnimation.start({
                 opacity: 1,
                 transition: {
-                    duration: 1.5,
+                    duration: 3,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.8
@@ -67,7 +67,7 @@ const SubsidiariesSection = ({ setPage, easing }) => {
                 >
                     <div>
                         <motion.h5 animate={headerAnimation}>Our subsidiaries</motion.h5>
-                        <motion.div animate={animation}><small>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC)</small></motion.div>
+                        <motion.div animate={animation}><small>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC) and the Central Bank of Nigeria (CBN)</small></motion.div>
                         <br />
                         <br />
                         <motion.div animate={animation} className="borderless_box mt-4">

@@ -16,7 +16,7 @@ const SplashScreen = ({ easing }) => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                    duration: 1.5,
+                    duration: 3,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.8
@@ -26,7 +26,7 @@ const SplashScreen = ({ easing }) => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                    duration: 1,
+                    duration: 2.5,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.2
@@ -35,7 +35,7 @@ const SplashScreen = ({ easing }) => {
             imageAnimation.start({
                 opacity: 1,
                 transition: {
-                    duration: 1.5,
+                    duration: 3,
                     bounce: 0.5,
                     ease: easing,
                     delay: 0.8
@@ -64,11 +64,11 @@ const SplashScreen = ({ easing }) => {
                 <GroupNavbar homePage={true} />
                 <div  className="group_header_content">
                     <div data-swiper-parallax="-300">
-                        <motion.h5 animate={headerAnimation}>We simply add <span>value</span></motion.h5>
-                        <motion.div animate={animation}><small>Leading you through the successful path of investment. No guessing. We simply stay S.M.A.R.T bringing you the best returns on investment.</small></motion.div>
+                        <motion.h5 initial={{ opacity: 0, y: "100vh"}} animate={headerAnimation}>We simply add <span>value</span></motion.h5>
+                        <motion.div initial={{ opacity: 0, y: "100vh"}} animate={animation}><small>Leading you through the successful path of investment. No guessing. We simply stay S.M.A.R.T bringing you the best returns on investment.</small></motion.div>
                     </div>
 
-                    <motion.div animate={imageAnimation} className="d-none d-md-block d-lg-block text-right" data-swiper-parallax="-200">
+                    <motion.div initial={{opacity: 0}} animate={imageAnimation} className="d-none d-md-block d-lg-block text-right" data-swiper-parallax="-200">
                         <img src="/images/new_cube.svg" className="" />
                     </motion.div>
                     
