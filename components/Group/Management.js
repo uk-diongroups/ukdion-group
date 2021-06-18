@@ -19,7 +19,6 @@ const Management = () => {
                     <p className="board_position">Chief Financial Officer</p>
                 </div>
             </div>
-
             <div className="plenty_images">
                 <Image width="300" height="350" src="/images/IMAGE OF MANAGMENT TEAM/FAITH GARBA.jpg" alt=""/>
                 <div className="text-center">
@@ -27,7 +26,6 @@ const Management = () => {
                     <p className="board_position">Head, Sales</p>
                 </div>
             </div>
-
             <div className="plenty_images">
                 <Image width="300" height="350" src="/images/IMAGE OF MANAGMENT TEAM/Ugo Oyewola.jpg" alt=""/>
                 <div className="text-center">
