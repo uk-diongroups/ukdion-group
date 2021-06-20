@@ -7,7 +7,7 @@ const Boards = () => {
         <div className="board_of_directors container">
             <div className="plenty_images">
                 <a href="/about">
-                    <Image width="300" height="350" src="/images/IMAGE OF THE BOARD OF DIRECTORS/BOSS.jpg" alt=""/>
+                    <Image width="300" height="350" src="/images/boardOfDirectors/boss.jpg" alt=""/>
                     <div className="text-center">
                         <p className="board_name">Michael Diongoli</p>
                         <p className="board_position">Group Managing Director/ Chief Executive Officer</p>
@@ -17,7 +17,7 @@ const Boards = () => {
 
             <div className="plenty_images">
                 <a href="/about">
-                    <Image width="300" height="350" src="/images/IMAGE OF THE BOARD OF DIRECTORS/Dakore Egbuson-Akande.jpg" alt=""/>
+                    <Image width="300" height="350" src="/images/boardOfDirectors/dakore.jpg" alt=""/>
                     <div className="text-center">
                         <p className="board_name">Dakore Egbuson-Akande</p>
                         <p className="board_position">Non-Executive Director</p>
@@ -27,7 +27,7 @@ const Boards = () => {
 
             <div className="plenty_images">
                 <a href="/about">
-                    <Image width="300" height="350" src="/images/IMAGE OF THE BOARD OF DIRECTORS/Fredrick Endorokeme Owotorufa.jpg" alt=""/>
+                    <Image width="300" height="350" src="/images/boardOfDirectors/fredrick.jpg" alt=""/>
                     <div className="text-center">
                         <p className="board_name">Fredrick Endorokeme Owotorufa</p>
                         <p className="board_position">Non-Executive Director</p>
@@ -37,7 +37,7 @@ const Boards = () => {
 
             <div className="plenty_images">
                 <a href="/about">
-                    <Image width="300" height="350" src="/images/IMAGE OF THE BOARD OF DIRECTORS/Aliliele, Chimerem Felix.jpg" alt=""/>
+                    <Image width="300" height="350" src="/images/boardOfDirectors/aliliele.jpg" alt=""/>
                     <div className="text-center">
                         <p className="board_name">Sir Chime Aliliele</p>
                         <p className="board_position">Non-Executive Director</p>
@@ -47,7 +47,7 @@ const Boards = () => {
 
             <div className="plenty_images">
                 <a href="/about">
-                    <Image width="300" height="350" src="/images/IMAGE OF THE BOARD OF DIRECTORS/Osiri Wisdom.jpg" alt=""/>
+                    <Image width="300" height="350" src="/images/boardOfDirectors/osiri.jpg" alt=""/>
                     <div className="text-center">
                         <p className="board_name">Osiri N. Wisdom</p>
                         <p className="board_position">Independent Non-Executive Director</p>
@@ -57,7 +57,7 @@ const Boards = () => {
 
             <div className="plenty_images">
                 <a href="/about">
-                    <Image width="300" height="350" src="/images/IMAGE OF THE BOARD OF DIRECTORS/Nnenna H. Ikubogh.jpg" alt=""/>
+                    <Image width="300" height="350" src="/images/boardOfDirectors/nnenna.jpg" alt=""/>
                     <div className="text-center">
                         <p className="board_name">Nnenna H. Ikubogh</p>
                         <p className="board_position">Executive Director, Strategy</p>
@@ -67,7 +67,7 @@ const Boards = () => {
 
             <div className="plenty_images">
                 <a href="/about">
-                    <Image width="300" height="350" src="/images/IMAGE OF THE BOARD OF DIRECTORS/adaeZE S. ejionye.jpg" alt=""/>
+                    <Image width="300" height="350" src="/images/boardOfDirectors/adaeze.jpg" alt=""/>
                     <div className="text-center">
                         <p className="board_name">Adaeze S. Ejionye</p>
                         <p className="board_position">Executive Director, Sales</p>
@@ -77,7 +77,7 @@ const Boards = () => {
 
             <div className="plenty_images">
                 <a href="/about">
-                    <Image width="300" height="350" src="/images/IMAGE OF THE BOARD OF DIRECTORS/Chukwuka Chukwuma.jpg" alt=""/>
+                    <Image width="300" height="350" src="/images/boardOfDirectors/chukwuka.jpg" alt=""/>
                     <div className="text-center">
                         <p className="board_name">Chukwuka Chukwuma</p>
                         <p className="board_position">Executive Director, Revenue</p>
@@ -87,7 +87,7 @@ const Boards = () => {
 
             <div className="plenty_images">
                 <a href="/about">
-                    <Image width="300" height="350" src="/images/IMAGE OF THE BOARD OF DIRECTORS/Saidi Olapade.jpg" alt=""/>
+                    <Image width="300" height="350" src="/images/boardOfDirectors/saidi.jpg" alt=""/>
                     <div className="text-center">
                         <p className="board_name">Saidi Olapade</p>
                         <p className="board_position">Managing Director, MFB</p>
