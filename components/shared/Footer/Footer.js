@@ -30,7 +30,7 @@ const Footer = () => {
             routes: [
                 {
                     name: "UkDion Investments",
-                    link: "/"
+                    link: "https://ukdioninvestment.com/"
                 },
                 {
                     name: "Dion microfinance",
