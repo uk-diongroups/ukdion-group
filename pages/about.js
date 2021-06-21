@@ -6,8 +6,8 @@ import Footer from "../components/shared/Footer/Footer";
 const about = () => {
     return (
         <div>
-//             <Mission/>
-//             <Footer />
+          <Mission/>
+          <Footer />
         </div>
     );
 };
