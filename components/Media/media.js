@@ -14,7 +14,7 @@ const MediaComp = () => {
                     <GroupNavbar />
                     <br />
                     <div className="mediaComp p-3">
-                        <h3>Legal Compliance</h3>
+                        <h3>Legal</h3>
                         <div className="privacy_group">
                             {
                                 nav.map((_nav, index) => (

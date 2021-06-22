@@ -28,8 +28,8 @@ const SectionTwo = () => {
         
         <div className="bdc_about d-none d-md-block d-lg-block" ref={ref}>
         <motion.div animate={animation} className="bdc_about_content">
-            <h3>Borderless. Without limit</h3>
-            <small>We support currencies from several countries.</small>
+            <h3>Borderless without limit</h3>
+            <small>We support currencies from these countries.</small>
             <div className="countries_box col-lg-10 mx-auto mt-5">
                 <div className="d-flex justify-content-between">
                     <div className="country">

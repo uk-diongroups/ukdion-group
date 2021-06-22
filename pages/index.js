@@ -76,8 +76,8 @@ const newPage = () => {
             className="swiper-container1"
         >
             <SwiperSlide className="swiper-slide1" data-hash="top"><SplashScreen animation={animation} renderAnimations={renderAnimations} headerAnimation={headerAnimation} imageAnimation={imageAnimation} easing={easing} /></SwiperSlide>
-            <SwiperSlide className="swiper-slide1" data-hash="subsidiaries"><SubsidiariesSection animation={animation} renderAnimations={renderAnimations} headerAnimation={headerAnimation} imageAnimation={imageAnimation} easing={easing} /></SwiperSlide>
             <SwiperSlide className="swiper-slide1" data-hash=""><BuildingSection animation={animation} renderAnimations={renderAnimations} headerAnimation={headerAnimation} imageAnimation={imageAnimation} easing={easing} /></SwiperSlide>
+            <SwiperSlide className="swiper-slide1" data-hash="subsidiaries"><SubsidiariesSection animation={animation} renderAnimations={renderAnimations} headerAnimation={headerAnimation} imageAnimation={imageAnimation} easing={easing} /></SwiperSlide>
             <SwiperSlide className="swiper-slide1" data-hash=""><CoreValuesSection animation={animation} renderAnimations={renderAnimations} headerAnimation={headerAnimation} imageAnimation={imageAnimation} easing={easing} /></SwiperSlide>
             <SwiperSlide style={{background: "#F0F4F8", display: "flex", flexDirection: "column-reverse"}} className="swiper-slide1"><Footer /></SwiperSlide>
     </Swiper>

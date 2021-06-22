@@ -67,27 +67,27 @@ const CoreValuesSection = ({ easing }) => {
                     <motion.div animate={imageAnimation} className="core_value_icons mt-5">
                         <div>
                             <img src="../images/time-is-money.png" alt="" />
-                            <p className="mt-2">United</p>
+                            <p className="mt-2"><span className="emphasis">U</span>nited</p>
                         </div>
                         <div>
                             <img src="../images/idea.png" alt="" />
-                            <p className="mt-2">Knowledgable</p>
+                            <p className="mt-2"><span className="emphasis">K</span>nowledgable</p>
                         </div>
                         <div>
                             <img src="../images/passive.png" alt="" />
-                            <p className="mt-2">Driven</p>
+                            <p className="mt-2"><span className="emphasis">D</span>riven</p>
                         </div>
                         <div>
                             <img src="../images/shield.png" alt="" />
-                            <p className="mt-2">Integrity</p>
+                            <p className="mt-2"><span className="emphasis">I</span>ntegrity</p>
                         </div>
                         <div>
                             <img src="../images/pie-chart.png" alt="" />
-                            <p className="mt-2">Organized</p>
+                            <p className="mt-2"><span className="emphasis">O</span>rganized</p>
                         </div>
                         <div>
                             <img src="../images/goal.png" alt="" />
-                            <p className="mt-2">Notable</p>
+                            <p className="mt-2"><span className="emphasis">N</span>otable</p>
                         </div>
                     </motion.div>
                     

@@ -72,7 +72,7 @@ const SubsidiariesSection = ({ setPage, easing }) => {
                         <br />
                         <motion.div animate={animation} className="borderless_box mt-4">
                             <div className="border-top-0 border-right border-bottom pl-0 pr-3 py-3 borderful">
-                                <Link href="/">
+                                <Link href="https://ukdion-group-investment.herokuapp.com/">
                                     <a>
                                         <img src="../images/group_1.svg" alt="" />
                                         <p>Investment</p>  
