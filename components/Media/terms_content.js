@@ -62,6 +62,7 @@ const Terms_content = () => {
 
                 <p>This website is established in Nigeria and these Terms shall be governed and construed
                 in accordance with Nigerian Law.</p>
+                
         </div>
     );
 };

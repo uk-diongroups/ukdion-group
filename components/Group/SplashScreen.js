@@ -62,7 +62,6 @@ const SplashScreen = ({ easing }) => {
         } 
         
     }, [inView])
-    console.log(consent)
     return (
         <div className="bdc_container_splash" ref={ref}>
         <div className="bdc_navbar_background">
