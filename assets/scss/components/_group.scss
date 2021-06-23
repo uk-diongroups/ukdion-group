@@ -1,7 +1,23 @@
 .activeClass {
     border-bottom: 1px solid #333;
 }
+.ndpr {
+    font-family: AvenirNext;
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    .acceptBtn {
+        background: #0BA759;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        width: 150px;
+        text-align: center;
+        height: 36px;
+    }
+    
 
+}
 .pulse {
     animation: pulse-animation 2s infinite;
     transform: scale(0.7);

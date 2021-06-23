@@ -1,10 +1,10 @@
 import MediaComp from "../components/Media/media";
 
 
-const media = () => {
+const legal = () => {
     return (
         <MediaComp />
     );
 };
 
-export default media;
+export default legal;

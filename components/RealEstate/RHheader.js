@@ -19,10 +19,14 @@ const RHheader = () => {
                             </div>
                             <br />
                             <p className="subhead">
-                            UK-DION Homes is a leading real estate company engaged in the acquisition, development, investment and management of luxurious contemporary homes across Nigeria.
+                            DION Homes is a leading real estate company engaged in the acquisition, development, investment and management of luxurious contemporary homes across Nigeria.
                             </p> 
                             <br />
-                            <button className="px-5">Contact us</button> 
+                            <button className="px-5">
+                                <a href="mailto: info@ukdion.com"> 
+                                    Contact us
+                                </a>
+                            </button> 
                         </div>
                     </div>
                     
@@ -63,7 +67,7 @@ const RHheader = () => {
                 <div>
                     <small className="text-success">BUSINESS AREA</small>
                     <h3 className="my-3">How we can serve you</h3>
-                    <p>The UK-DION Homes is set to change the face of Real Estate Development in Nigeria by delivering homes that combine high class architectural design with exotic environmentally friendly finishes.</p>
+                    <p>The DION Homes is set to change the face of Real Estate Development in Nigeria by delivering homes that combine high class architectural design with exotic environmentally friendly finishes.</p>
                     <div className="business_divide p-0">
                         <div className="business_divide_content">
                             <div>
@@ -127,7 +131,7 @@ const RHheader = () => {
 
                                 <div className="d-flex">
                                     <p className="sign_dot">&#46;</p>
-                                    <p>All company’s portfolio would be handled by UK-DION Homes</p>
+                                    <p>All company’s portfolio would be handled by DION Homes</p>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +143,7 @@ const RHheader = () => {
                             <div>
                                 <div className="d-flex">
                                     <p className="sign_dot">&#46;</p>
-                                    <p>Engagement in conventional sale, lease of properties in the portfolio of UK-DION Residences, and sale of Real Estate products of other companies</p>
+                                    <p>Engagement in conventional sale, lease of properties in the portfolio of DION Residences, and sale of Real Estate products of other companies</p>
                                 </div>
                             </div>
                         </div>
@@ -150,14 +154,14 @@ const RHheader = () => {
                 </div>
             </section>
             <br /><br /><br />
-            <section className="slider_section mt-5">
+            {/* <section className="slider_section mt-5">
                 <div className="slider_section_content">
                     <small className="text-success">OUR PROPERTIES</small>
                     <h3 className="my-3">Type of properties we have managed</h3>
                     <p>You might want to check out some of the properties we have and clients we have served.</p>
                     <Slider />
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 };

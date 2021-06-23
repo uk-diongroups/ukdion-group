@@ -29,7 +29,7 @@ const SectionThree = () => {
             <div className="bdc_learn_background"></div>
             <motion.div animate={animation} className="bdc_learn_content">
                 <h4>Learn more about us</h4>
-                <p>DIon Bureau De Change Ltd is a subsidiary of UK-DION limited.</p>
+                <p>Dion Bureau De Change Limited is a subsidiary of UK-DION limited.</p>
                 <p>It is licensed by the Central Bank of Nigeria to provide foreign exchange services. We operate out of our head office at Lekki Phase 1 in Lagos, where we provide foreign exchange services to both corporates and individuals. Our rates are competitive and we are re focused on building long-term, mutually- beneficial relationships.</p>
             </motion.div>
 

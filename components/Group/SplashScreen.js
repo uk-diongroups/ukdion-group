@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useAnimation} from "framer-motion"
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer'
 import GroupNavbar from '../shared/Navbar/Group.navbar';
+import NdprAlert from '../NDPR/ndpr_modal';
 
 
 const SplashScreen = ({ easing }) => {
@@ -10,6 +11,10 @@ const SplashScreen = ({ easing }) => {
     const animation = useAnimation();
     const headerAnimation = useAnimation();
     const imageAnimation = useAnimation();
+    let consent;
+    if (typeof window !== 'undefined') {
+        consent = window.localStorage.getItem("consent");
+    }
     useEffect(() => {
         if(inView) {
             animation.start({
@@ -57,11 +62,13 @@ const SplashScreen = ({ easing }) => {
         } 
         
     }, [inView])
+    console.log(consent)
     return (
         <div className="bdc_container_splash" ref={ref}>
         <div className="bdc_navbar_background">
             <div className="containing_background_content">
                 <GroupNavbar homePage={true} />
+                <NdprAlert isOpen={consent ? false : true}/>
                 <div  className="group_header_content">
                     <div data-swiper-parallax="-300">
                         <motion.h5 initial={{ opacity: 0, y: "100vh"}} animate={headerAnimation}>We simply add <span>value</span></motion.h5>

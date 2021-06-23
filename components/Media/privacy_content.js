@@ -32,10 +32,10 @@ const Privacy_content = () => {
             If you have any questions, concerns, or comments about our privacy policy, you may contact us using the information below: 
             </p>
             <p>
-                By email:.........................
+                By email: info@ukdion.com
             </p>
             <p>
-                By Phone:.........................
+                By Phone: +234(0)8091115748
             </p>
         </div>
     );

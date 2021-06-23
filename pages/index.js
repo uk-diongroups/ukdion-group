@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Mousewheel, HashNavigation, Parallax, EffectFade } from 'swiper'
 import SplashScreen from '../components/Group/SplashScreen';
@@ -7,6 +7,7 @@ import BuildingSection from '../components/Group/BuildingSection';
 import CoreValuesSection from '../components/Group/CoreValuesSection';
 import Footer from '../components/shared/Footer/Footer';
 import { useAnimation } from "framer-motion"
+import NdprAlert from '../components/NDPR/ndpr_modal';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, Mousewheel, A11y, HashNavigation, Parallax, EffectFade]);
 
@@ -61,6 +62,8 @@ const newPage = () => {
             })
         } 
     }
+    
+    
     return (
         <Swiper
             spaceBetween={500}

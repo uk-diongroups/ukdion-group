@@ -102,12 +102,19 @@ const SubsidiariesSection = ({ setPage, easing }) => {
                                 <Link href="/">
                                     <a>
                                         <img src="../images/group_1.svg" alt="" />
-                                        <p>DION Factory</p>  
+                                        <p>Dion Factory</p>  
                                     </a>
                                 </Link>
                             </div>
 
-                            <div></div>
+                            <div className="border-top-0 border-left p-3 borderful">
+                                <Link href="/">
+                                    <a>
+                                        <img src="../images/group_1.svg" alt="" />
+                                        <p>House of Dion</p>  
+                                    </a>
+                                </Link>
+                            </div>
 
                             <div className="border-top-0 border-left p-3 borderful">
                                 <Link href="/dion_homes">
