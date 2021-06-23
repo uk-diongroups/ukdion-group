@@ -19,15 +19,12 @@ const NdprAlert = (props) => {
   return (
     <div>
       <Modal backdrop="static" trapFocus={true} isOpen={modal} modalClassName="ndpr" toggle={toggle} className='ndpr' fade={true} >
-        <ModalHeader toggle={toggle}>Important Notice</ModalHeader>
         <ModalBody>
-          <div>
+        <div>
               <p>
-              This website uses cookies to optimize your experience and your continued use signifies consent to our Group Privacy Policy - <Link href="/legal"><a>Read Here</a></Link> 
+              This website uses cookies to optimize your experience and your continued use signifies consent to our Group Privacy Policy -  <a className="ndpr-link" href="/media">Read Here</a> 
+              <span><button className="acceptBtn" onClick={iAgree}>I accept</button></span>
             </p>
-            <button className="acceptBtn" onClick={iAgree}>
-              I accept
-            </button>
           </div>
         </ModalBody>
       </Modal>

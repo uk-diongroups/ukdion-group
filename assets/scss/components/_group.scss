@@ -4,19 +4,22 @@
 .ndpr {
     font-family: AvenirNext;
     width: 100%;
-    margin-top: 0;
+    margin-bottom: 0;
     margin-right: 0;
     .modal-dialog {
         max-width: 100vw;
+        margin-top: 88vh;
+        
     }
     .acceptBtn {
         background: #0BA759;
         border: none;
         border-radius: 8px;
+        margin-left: 10px;
         color: #fff;
         width: 150px;
         text-align: center;
-        height: 36px;
+        height: 30px;
     }
     
 
