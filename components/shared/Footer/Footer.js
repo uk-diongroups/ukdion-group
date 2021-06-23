@@ -7,7 +7,7 @@ const Footer = () => {
             head: "COMPANY",
             routes: [
                 {
-                    name: "About us",
+                    name: "About Us",
                     link: "/about"
                 },
                 
@@ -72,11 +72,11 @@ const Footer = () => {
             routes: [
                 {
                     name: "Privacy policy",
-                    link: "/media"
+                    link: "/legal"
                 },
                 {
                     name: "Terms of service",
-                    link: "/media"
+                    link: "/legal"
                 }
             ]
         }
@@ -204,13 +204,7 @@ const Footer = () => {
                         <small>© 2021 Copyright: UK-Dion Group</small>
                     </Col>
                     <Col md={6} className="text-right">
-                        <small>Developed 
-                            {/* <span className="footer-span">
-                                <svg width="24" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24 7.38508C24 3.30637 21.0357 0 17.3797 0C15.1602 0 13.2017 1.22211 12 3.09009C10.7983 1.22211 8.83981 0 6.62097 0C2.96427 0 0 3.30562 0 7.38508C0 7.96283 0.0657534 8.52262 0.178474 9.06221C1.09768 15.4332 7.44825 22.1545 12 24C16.5511 22.1545 22.9023 15.4332 23.8202 9.06296C23.9342 8.52337 24 7.96358 24 7.38508Z" fill="#78B159"/>
-                                </svg>
-                            </span> */}
-                            by the UK-DION Group
+                        <small>Developed by the UK-DION Group
                         </small>
                     </Col>
                 </Row>

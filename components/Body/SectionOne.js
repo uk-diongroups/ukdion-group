@@ -33,7 +33,7 @@ const SectionOne = ({ fadeInUp }) => {
                         <h5 className="d-sm-block d-md-none d-lg-none">Reliable, fast and convenient <span>Bureau De Change</span><br/> services.</h5>
                         <p className="mt-4 mb-5 d-none d-md-block d-lg-block">We help businesses and individuals place orders and broker <br/>foreign currency transactions conveniently and securely. </p>
                         <button className="btn btn-success px-4">
-                            <a href="mailto: info@ukdion.com"> 
+                            <a href="mailto: bdc@ukdion.com"> 
                                 Contact us
                             </a>
                         </button>

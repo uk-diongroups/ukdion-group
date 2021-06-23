@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Mousewheel, HashNavigation, Parallax, EffectFade } from 'swiper'
 import SplashScreen from '../components/Group/SplashScreen';
@@ -7,11 +6,25 @@ import BuildingSection from '../components/Group/BuildingSection';
 import CoreValuesSection from '../components/Group/CoreValuesSection';
 import Footer from '../components/shared/Footer/Footer';
 import { useAnimation } from "framer-motion"
-import NdprAlert from '../components/NDPR/ndpr_modal';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, Mousewheel, A11y, HashNavigation, Parallax, EffectFade]);
+let client = require('contentful').createClient({
+    space: process.env.NEXT_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.NEXT_CONTENTFUL_ACCESS_TOKEN
+})
 
-const newPage = () => {
+export async function getStaticProps() {
+    let data = await client.getEntries({
+        content_type: 'blog'
+    })
+    return {
+        props: {
+            articles: data.items
+        }
+    }
+}
+const newPage = ({ articles }) => {
+    // console.log(articles)
     const easing = [0.6, -0.05, 0.01, 0.99];
     const animation = useAnimation();
     const headerAnimation = useAnimation();

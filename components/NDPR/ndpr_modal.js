@@ -23,7 +23,7 @@ const NdprAlert = (props) => {
         <ModalBody>
           <div>
               <p>
-              This website uses cookies to optimize your experience and your continued use signifies consent to our Group Privacy Policy - <Link href="/media"><a>Read Here</a></Link> 
+              This website uses cookies to optimize your experience and your continued use signifies consent to our Group Privacy Policy - <Link href="/legal"><a>Read Here</a></Link> 
             </p>
             <button className="acceptBtn" onClick={iAgree}>
               I accept
