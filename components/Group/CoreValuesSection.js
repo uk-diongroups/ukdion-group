@@ -62,7 +62,7 @@ const CoreValuesSection = ({ easing }) => {
                 <div className="containing_background_content core_value_things">
                     <div className="core_values_content">
                         <motion.h5 animate={headerAnimation}>Our core <span>values</span></motion.h5>
-                        <motion.div animate={animation}><small>UK-DION Group is a bespoke group of companies focused on delivering value in the financial Services space. Our model is focused on investment management, financial Advisory.</small></motion.div>
+                        {/* <motion.div animate={animation}><small>UK-DION Group is a bespoke group of companies focused on delivering value in the financial Services space. Our model is focused on investment management, financial Advisory.</small></motion.div> */}
                     </div>
                     <motion.div animate={imageAnimation} className="core_value_icons mt-5">
                         <div>

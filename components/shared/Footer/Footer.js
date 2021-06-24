@@ -33,7 +33,7 @@ const Footer = () => {
                     link: "https://ukdion-group-investment.herokuapp.com/"
                 },
                 {
-                    name: "Dion Microfinance",
+                    name: "UK-DION Microfinance",
                     link: "/"
                 },
                 {
@@ -41,13 +41,17 @@ const Footer = () => {
                     link: "/bdc"
                 },
                 {
-                    name: "Dion Water",
+                    name: "Dion Factory",
                     link: "/"
                 },
                 {
                     name: "Dion Homes",
                     link: "/dion_homes"
-                }
+                },
+                {
+                    name: "House of Dion",
+                    link: "/"
+                },
             ]
         },
         {
@@ -138,9 +142,14 @@ const Footer = () => {
                             </Row> 
                         </div>
                         <div className="underline footer-body">
-                            <Row>Plot 10A, Block 60, Kafayat Abdulrasaq Street,</Row>
-                            <Row>Lekki, Lagos State</Row>
-                            <Row>+234(0)8091115748</Row>
+                            <Link href="https://www.google.com/maps/place/Uk-Dion+Investment+Limited/@6.4413793,3.4644781,17z/data=!3m1!4b1!4m5!3m4!1s0x103bf5f49f291e89:0xfd1c36ed73fb2234!8m2!3d6.4413793!4d3.4666668">
+                                <a target="blank">
+                                    <Row>Plot 10A, Block 60, Kafayat Abdulrasaq Street,</Row>
+                                    <Row>Lekki, Lagos State</Row>
+                                    <Row>+234(0)8091115748</Row>
+                                </a>
+                            </Link>
+                            
                         </div>
                         <br/>
                         

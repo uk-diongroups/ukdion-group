@@ -71,7 +71,7 @@ const SplashScreen = ({ easing }) => {
                 <div  className="group_header_content">
                     <div data-swiper-parallax="-300">
                         <motion.h5 initial={{ opacity: 0, y: "100vh"}} animate={headerAnimation}>We simply add <span>value</span></motion.h5>
-                        <motion.div initial={{ opacity: 0, y: "100vh"}} animate={animation}><small>Leading you through the successful path of investment. No guessing. We simply stay S.M.A.R.T bringing you the best returns on investment.</small></motion.div>
+                        {/* <motion.div initial={{ opacity: 0, y: "100vh"}} animate={animation}><small>Leading you through the successful path of investment. No guessing. We simply stay S.M.A.R.T bringing you the best returns on investment.</small></motion.div> */}
                     </div>
 
                     <motion.div initial={{opacity: 0}} animate={imageAnimation} className="d-none d-md-block d-lg-block text-right" data-swiper-parallax="-200">
