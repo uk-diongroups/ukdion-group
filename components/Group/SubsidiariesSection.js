@@ -66,7 +66,7 @@ const SubsidiariesSection = ({ setPage, easing }) => {
                     className="our_subsidaries"
                 >
                     <div>
-                        <motion.h5 animate={headerAnimation}>Our Business Units</motion.h5>
+                        <motion.h5 animate={headerAnimation}>Our Companies</motion.h5>
                         <motion.div animate={animation}><small>UK-DION GROUP LIMITED is an asset management company duly registered with the Corporate Affairs Commission (CAC) and regulated by the Securities and Exchange Commission (SEC) and the Central Bank of Nigeria (CBN)</small></motion.div>
                         <br />
                         <br />
