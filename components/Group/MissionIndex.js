@@ -37,27 +37,27 @@ const Mission = () => {
                             <div className="mission_core_value_icons mt-5">
                                 <div>
                                     <img src="../images/time-is-money.png" alt="" />
-                                    <p>United</p>
+                                    <p><span className="emphasis">U</span>nited</p>
                                 </div>
                                 <div>
                                     <img src="../images/idea.png" alt="" />
-                                    <p>Knowledgable</p>
+                                    <p><span className="emphasis">K</span>nowledgable</p>
                                 </div>
                                 <div>
                                     <img src="../images/passive.png" alt="" />
-                                    <p>Driven</p>
+                                    <p><span className="emphasis">D</span>riven</p>
                                 </div>
                                 <div>
                                     <img src="../images/shield.png" alt="" />
-                                    <p>Integrity</p>
+                                    <p><span className="emphasis">I</span>ntegrity</p>
                                 </div>
                                 <div>
                                     <img src="../images/pie-chart.png" alt="" />
-                                    <p>Organized</p>
+                                    <p><span className="emphasis">O</span>rganized</p>
                                 </div>
                                 <div>
                                     <img src="../images/goal.png" alt="" />
-                                    <p>Notable</p>
+                                    <p><span className="emphasis">N</span>otable</p>
                                 </div>
                             </div>
                         </div>
@@ -65,12 +65,14 @@ const Mission = () => {
                     <div className="mission mx-auto col-lg-6">
                         <div className="our_mission">
                             <h5>Our Mission</h5>
-                            <p>To become the most sought-after investment company nationally and internationally, setting the pace for other investment companies to follow by offering the best financial/investment advice and packages to suit our client’s needs per time and being committed to the growth of our partners and investors</p>
+                            <p>To build trust, ensure value addition and wealth creation for our clients.</p>
                         </div>
 
                         <div className="our_vision">
                             <h5>Our Vision</h5>
-                            <p>Building a formidable investment institution in Nigeria with international standard and recognition, to give our investors value for their money invested through rapid growth and profit within the shortest possible time.</p>
+                            <p>To be West Africa’s leading financial solutions hub.
+
+To be a one stop shop for all financial solutions in West Africa.</p>
                         </div>
                     </div>
                     <div className="">

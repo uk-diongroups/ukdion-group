@@ -7,12 +7,12 @@ const Terms_content = () => {
                 Access to this website and the use of the information which appears on it (‘the
                 contents’) are governed by the following terms and conditions. These conditions
                 become effective when you access the site for the first time and constitute a binding
-                agreement between us <b>UK-DION Group</b> and yourself, which will always prevail. The
+                agreement between <b>UK-DION GROUP LIMITED and its related companies (hereinafter called “Uk-Dion”)</b> and yourself, which will always prevail. The
                 current version of these conditions will govern our respective rights and obligations each
                 time you access this site. Please take time to read them carefully each time you visit
                 this website.</p>
 
-                <p>Reference in these Terms to ‘we’, ‘our’ or ‘us’ is to <b>UK-DION Group.</b></p>
+                <p>Reference in these Terms to ‘we’, ‘our’ or ‘us’ is to <b>UK-DION</b></p>
 
                 <p>The services and packages offered on this website (&quot;Services and Packages&quot;) are for
                 information purposes only. No persons gaining access to this website in any
@@ -25,7 +25,7 @@ const Terms_content = () => {
                 or solicitation by anyone in any jurisdiction in which such offer or solicitation is not
                 lawful. It is the responsibility of any person to inform themselves of and to observe all
                 applicable laws and regulations of any relevant jurisdiction before they subscribe for the
-                services. <b>UK-DION Group</b> shall have the final determination of eligibility to subscribe
+                services. <b>We</b> shall have the final determination of eligibility to subscribe
                 to any of the services.</p>
 
                 <p>The information contained in these pages is not intended to provide professional advice
@@ -53,16 +53,16 @@ const Terms_content = () => {
                 included in the Site is owned by or licensed to us unless otherwise noted. You may
                 imprint, copy download or temporarily store extracts from the Site for your personal
                 information or when you use any products and services. You may not alter or otherwise
-                make any changes to any material that you print or download from the Site, including,
+                make any changes to any material that you print or download from this website, including,
                 without limitation, removing any identifying marks or legends from such material. You
                 may not distribute these materials to others. Any other use is prohibited unless you first
-                request and obtain our written permission. In particular, no one may use a part of the
-                Site on any other website, or link any other website to the Site, without our prior written
-                permission or the consent of the relevant <b>UK-DION Group.</b></p>
+                request and obtain our written permission. In particular, no one may use a part of this
+                website on any other website, or link any other website to the Site, without our prior written
+                permission.</p>
 
-                <p>This website is established in Nigeria and these Terms shall be governed and construed
-                in accordance with Nigerian Law.</p>
-                
+                <p>This website is established in Nigeria and this Terms and Conditions shall be governed and 
+                    construed in accordance with the laws of the Federal Republic of Nigeria</p>
+
         </div>
     );
 };
