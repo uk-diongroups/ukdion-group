@@ -96,7 +96,7 @@ const RHheader = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="business_divide_content">
+                        {/* <div className="business_divide_content">
                             <div>
                                 <img src="./images/property.png" alt="" />
                             </div>
@@ -117,7 +117,7 @@ const RHheader = () => {
                                     <p>Sponsorship of family large parcel for survey, reclamation, and infrastructural development.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="business_divide_content">
                             <div>
                                 <img src="./images/real_estate.png" alt="" />
